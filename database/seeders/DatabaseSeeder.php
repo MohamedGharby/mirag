@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Social;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,5 +15,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+
+        $this->call([
+            Roleseeder::class,
+            Userseeder::class,
+            Socialseeder::class,
+            Projectseeder::class,
+            Latestseeder::class,
+            Commentseeder::class,
+            Expertseeder::class,
+        ] );
     }
 }

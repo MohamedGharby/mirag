@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColumnsToUsersTable extends Migration
+class AddColumnsToProjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddColumnsToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->foreignId("role_id")->constrained();
+        Schema::table('projects', function (Blueprint $table) {
+            $table->string("img");
         });
     }
 
@@ -25,8 +25,10 @@ class AddColumnsToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn("role_id");
+        Schema::table('projects', function (Blueprint $table) {
+            //
+            $table->dropColumn("img");
+            
         });
     }
 }

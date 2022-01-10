@@ -17,6 +17,8 @@ class ProjectFactory extends Factory
      */
     public function definition()
     {
+        static $i = 1;
+        $i++;
         return [
             //
             "title" => $this->faker->word(),
@@ -25,7 +27,8 @@ class ProjectFactory extends Factory
             "surface_area" => $this->faker->numberBetween(2000 , 10000),
             "year" => $this->faker->year('now'),
             "desc" => $this->faker->sentence(300),
-            "best" => $this->faker->boolean(50),
+            "best" => $this->faker->boolean(10),
+            "img" => "projects/$i.png",
         ];
     }
 }
