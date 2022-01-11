@@ -1,7 +1,183 @@
-@extends("layout")
+@extends("web.layout")
 @section("title")
 الصفحة الرئيسية
 @endsection
+
+@section('header')
+        <!-- Main Header / Header Style Five-->
+        <header class="main-header header-style-five">
+
+            <!--Header-Upper-->
+
+            <div class="header-upper">
+                <div class="auto-container">
+                    <div class="clearfix">
+
+                        <div class="pull-left logo-box">
+                            <div class="logo">
+                                <a href="{{ url('/') }}"><img src="{{ asset('web/images/logo-3.png') }}" alt="" title=""></a>
+                            </div>
+                        </div>
+
+                        <div class="pull-right upper-right clearfix">
+
+                            <!--Info Box-->
+                            <div class="upper-column info-box">
+                                <div class="icon-box"><span class="flaticon-clock"></span></div>
+                                <ul>
+                                    <li><strong>09:00 am - 06:00 pm</strong></li>
+                                    <li>We Serve with Pleasure</li>
+                                </ul>
+                            </div>
+
+                            <!--Info Box-->
+                            <div class="upper-column info-box">
+                                <div class="icon-box"><span class="flaticon-phone-call"></span></div>
+                                <ul>
+                                    <li><strong>(01) 98 756 321 01</strong></li>
+                                    <li>Discuss any Queries</li>
+                                </ul>
+                            </div>
+
+                            <!--Info Box-->
+                            <div class="upper-column info-box">
+                                <div class="icon-box"><span class="flaticon-placeholder-1"></span></div>
+                                <ul>
+                                    <li><strong>location</strong></li>
+                                    <li>185, Los Angeles, USA</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+            <!--Header Lower-->
+            <div class="header-lower ">
+
+                <div class="auto-container">
+                    <div class="nav-outer clearfix">
+
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md">
+                            <div class="navbar-header">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li><a href="contact.html">تواصل معنا</a></li>
+
+                                    
+                                    <li class="dropdown">
+                                        <a href="#">الأخبار</a>
+                                    </li>
+                                
+                                    <li class="dropdown">
+                                        <a href="#">المشاريع</a>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <a href="{{url('/about')}}">من نحن</a>
+                                    </li>
+
+                                    <li class="current dropdown ">
+                                        <a href="{{url('/')}}">الرئيسية</a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+
+                        <!-- Main Menu End-->
+                        <div class="outer-box clearfix">
+
+                            <ul class="options">
+                                <li class="dropdown search-box-outer">
+                                    <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                                    <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                        <li class="panel-outer">
+                                            <div class="form-container">
+                                                <form method="post" action="blog.html">
+                                                    <div class="form-group">
+                                                        <input type="search" name="field-name" value="" placeholder="Search Here" required>
+                                                        <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><span class="fa fa-cart-plus"></span></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Header Lower-->
+
+            <!--Sticky Header-->
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <!--Logo-->
+                    <div class="logo pull-left">
+                        <a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
+                    </div>
+
+                    <!--Right Col-->
+                    <div class="right-col pull-right">
+                        <!-- Main Menu -->
+                        <nav class="main-menu  navbar-expand-md">
+                            <div class="navbar-header">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
+                                <ul class="navigation clearfix">
+                                    <li><a href="contact.html">تواصل معنا</a></li>
+
+                                    <li class="dropdown"><a href="#">أخبار</a>
+
+                                    </li>
+
+                                    <li class="dropdown"><a href="#">المشاريع</a>
+
+                                    </li>
+
+                                    <li class="dropdown"><a href="{{url('/about')}}">من نحن</a>
+                                    </li>
+
+                                    <li class="current dropdown"><a href="{{ url('/') }}">الصفحة الرئيسية</a>
+                                    </li>
+    
+                                </ul>
+
+
+                            </div>
+                        </nav><!-- Main Menu End-->
+                    </div>
+
+                </div>
+            </div>
+            <!--End Sticky Header-->
+
+        </header>
+        <!--End Main Header -->
+
+@endsection
+
 @section("main")
 
 
@@ -180,21 +356,10 @@
             <div class="auto-container">
                 <div class="row clearfix">
 
-                    <!--Column-->
-                    </div>
-
-                    <!--Column-->
-                    
-
-                    
-
-                    <!--Column-->
-                    
-
                 </div>
             </div>
         </div>
-        <div class="outer-image"><img src="{{asset('images/resource/image-1.png')" alt="" /></div>
+        <div class="outer-image"><img src="{{asset('images/resource/image-1.png')}}" alt="" /></div>
     </div>
     <!--End Fun Facts Section-->
 
@@ -830,7 +995,7 @@
                             <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
                         </ul>
                     	<div class="image">
-                        	<img src="images/resource/team-1.png" alt="" />
+                        	<img src="{{ asset('web/images/resource/team-1.png') }}" alt="" />
                         </div>
                         <div class="lower-box">
                         	<h3><a href="#">Celsiya Malcom</a></h3>
@@ -849,7 +1014,7 @@
                             <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
                         </ul>
                     	<div class="image">
-                        	<img src="images/resource/team-2.png" alt="" />
+                        	<img src="{{ asset('web/images/resource/team-1.png') }}" alt="" />
                         </div>
                         <div class="lower-box">
                         	<h3><a href="#">Andrea Spilber</a></h3>
@@ -868,7 +1033,7 @@
                             <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
                         </ul>
                     	<div class="image">
-                        	<img src="images/resource/team-3.png" alt="" />
+                        	<img src="{{ asset('web/images/resource/team-1.png') }}" alt="" />
                         </div>
                         <div class="lower-box">
                         	<h3><a href="#">Nelson Mecoy</a></h3>
@@ -899,7 +1064,7 @@
                 <div class="news-block col-lg-4 col-md-6 col-sm-12">
                 	<div class="inner-box">
                     	<div class="image">
-                        	<a href="blog-detail.html"><img src="images/resource/news-1.jpg" alt="" /></a>
+                        	<a href="blog-detail.html"><img src="{{ asset('web/images/resource/news-1.jpg') }}" alt="" /></a>
                             <div class="post-date"><span>18</span> June</div>
                         </div>
                         <div class="lower-content">
@@ -918,7 +1083,7 @@
                 <div class="news-block col-lg-4 col-md-6 col-sm-12">
                 	<div class="inner-box">
                     	<div class="image">
-                        	<a href="blog-detail.html"><img src="images/resource/news-2.jpg" alt="" /></a>
+                        	<a href="blog-detail.html"><img src="{{ asset('web/images/resource/news-2.jpg') }}" alt="" /></a>
                             <div class="post-date"><span>18</span> June</div>
                         </div>
                         <div class="lower-content">
@@ -937,7 +1102,7 @@
                 <div class="news-block col-lg-4 col-md-6 col-sm-12">
                 	<div class="inner-box">
                     	<div class="image">
-                        	<a href="blog-detail.html"><img src="images/resource/news-3.jpg" alt="" /></a>
+                        	<a href="blog-detail.html"><img src="{{ asset('web/images/resource/news-3.jpg') }}" alt="" /></a>
                             <div class="post-date"><span>18</span> June</div>
                         </div>
                         <div class="lower-content">

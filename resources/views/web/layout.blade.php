@@ -33,174 +33,12 @@
     <div class="page-wrapper rtl">
 
         <!-- Preloader -->
-        <div class="preloader"></div>
+        <div class="preloader">
 
-        <!-- Main Header / Header Style Five-->
-        <header class="main-header header-style-five">
+        </div>
 
-            <!--Header-Upper-->
+        @yield('header')
 
-            <div class="header-upper">
-                <div class="auto-container">
-                    <div class="clearfix">
-
-                        <div class="pull-left logo-box">
-                            <div class="logo"><a href="index.html"><img src="images/logo-3.png" alt="" title=""></a></div>
-                        </div>
-
-                        <div class="pull-right upper-right clearfix">
-
-                            <!--Info Box-->
-                            <div class="upper-column info-box">
-                                <div class="icon-box"><span class="flaticon-clock"></span></div>
-                                <ul>
-                                    <li><strong>09:00 am - 06:00 pm</strong></li>
-                                    <li>We Serve with Pleasure</li>
-                                </ul>
-                            </div>
-
-                            <!--Info Box-->
-                            <div class="upper-column info-box">
-                                <div class="icon-box"><span class="flaticon-phone-call"></span></div>
-                                <ul>
-                                    <li><strong>(01) 98 756 321 01</strong></li>
-                                    <li>Discuss any Queries</li>
-                                </ul>
-                            </div>
-
-                            <!--Info Box-->
-                            <div class="upper-column info-box">
-                                <div class="icon-box"><span class="flaticon-placeholder-1"></span></div>
-                                <ul>
-                                    <li><strong>location</strong></li>
-                                    <li>185, Los Angeles, USA</li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--End Header Upper-->
-
-            <!--Header Lower-->
-            <div class="header-lower ">
-
-                <div class="auto-container">
-                    <div class="nav-outer clearfix">
-
-                        <!-- Main Menu -->
-                        <nav class="main-menu navbar-expand-md">
-                            <div class="navbar-header">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-
-                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li class="current dropdown "><a href="{{url('/')}}">الرئيسية</a>
-                                        
-                                    </li>
-                                    <li class="dropdown"><a href="#">من نحن</a>
-                                        
-                                    </li>
-                                  
-                                    <li class="dropdown"><a href="#">المشاريع</a>
-                                        
-                                    </li>
-
-                                   
-
-                                    <li class="dropdown"><a href="#">الأخبار</a>
-                                        
-                                    </li>
-                                   
-                                    <li><a href="contact.html">تواصل معنا</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <!-- Main Menu End-->
-
-                        <!-- Main Menu End-->
-                        <div class="outer-box clearfix">
-
-                            <ul class="options">
-                                <li class="dropdown search-box-outer">
-                                    <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                                    <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                                        <li class="panel-outer">
-                                            <div class="form-container">
-                                                <form method="post" action="blog.html">
-                                                    <div class="form-group">
-                                                        <input type="search" name="field-name" value="" placeholder="Search Here" required>
-                                                        <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#"><span class="fa fa-cart-plus"></span></a></li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Header Lower-->
-
-            <!--Sticky Header-->
-            <div class="sticky-header">
-                <div class="auto-container clearfix">
-                    <!--Logo-->
-                    <div class="logo pull-left">
-                        <a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
-                    </div>
-
-                    <!--Right Col-->
-                    <div class="right-col pull-right">
-                        <!-- Main Menu -->
-                        <nav class="main-menu  navbar-expand-md">
-                            <div class="navbar-header">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-
-                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
-                                <ul class="navigation clearfix">
-                                    <li class="current dropdown"><a href="#">الصفحة الرئيسية</a>
-                                    </li>
-                                    <li class="dropdown"><a href="#">من نحن</a>
-                                    </li>
-
-                                    <li class="dropdown"><a href="#">المشاريع</a>
-
-                                    </li>
-
-
-                                    <li class="dropdown"><a href="#">أخبار</a>
-
-                                    </li>
-
-                                    <li><a href="contact.html">تواصل معنا</a></li>
-                                </ul>
-                            </div>
-                        </nav><!-- Main Menu End-->
-                    </div>
-
-                </div>
-            </div>
-            <!--End Sticky Header-->
-
-        </header>
-        <!--End Main Header -->
 
 
 
@@ -227,7 +65,7 @@
                                 <div class="footer-column col-lg-7 col-md-6 col-sm-12">
                                     <div class="footer-widget logo-widget">
                                         <div class="logo">
-                                            <a href="index.html"><img src="images/footer-logo.png" alt="" /></a>
+                                            <a href="index.html"><img src="{{ asset('web/images/footer-logo.png') }}" alt="" /></a>
                                         </div>
                                         <div class="text">Thewebmax ipsum amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat. ipsum dolor sit amet, consectetuer adipiscing. ipsum dolor sit .</div>
                                     </div>
@@ -261,7 +99,7 @@
                                         <div class="news-widget-block">
                                             <div class="widget-inner">
                                                 <div class="image">
-                                                    <img src="images/resource/news-image-1.jpg" alt="" />
+                                                    <img src="{{ asset('web/images/resource/news-image-1.jpg') }}" alt="" />
                                                 </div>
                                                 <h3><a href="blog-detail.html">Planning Process Needs to improve your Business.</a></h3>
                                                 <div class="post-date">28 Dec, 2020</div>
@@ -272,7 +110,7 @@
                                         <div class="news-widget-block">
                                             <div class="widget-inner">
                                                 <div class="image">
-                                                    <img src="images/resource/news-image-2.jpg" alt="" />
+                                                    <img src="{{ asset('web/images/resource/news-image-2.jpg') }}" alt="" />
                                                 </div>
                                                 <h3><a href="blog-detail.html">7 Tips To Move Your Project Move Forward.</a></h3>
                                                 <div class="post-date">13 Oct, 2020</div>
@@ -287,7 +125,7 @@
                                     <div class="footer-widget map-widget">
                                         <h2>Our Branches</h2>
                                         <div class="image">
-                                            <img src="images/resource/map.png" alt="" />
+                                            <img src="{{ asset('web/images/resource/map.png') }}" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -305,11 +143,11 @@
                 <div class="auto-container">
                     <div class="row clearfix">
                         <div class="column col-lg-6 col-md-6 col-sm-12">
-                            <div class="copyright">Copyrights 2020. All Rights are Reserved by <a href="#">expert-themes</a></div>
+                            <div class="copyright">Copyrights 2022. All Rights are Reserved by <a href="{{ url('/') }}">Mirag</a></div>
                         </div>
                         <div class="column col-lg-6 col-md-6 col-sm-12">
                             <ul class="footer-nav">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="{{ url('/') }}">Home</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Services</a></li>
                                 <li><a href="#">Projects</a></li>
