@@ -11,12 +11,13 @@
     <link href="{{asset('web/plugins/revolution/css/navigation.css')}}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
     <link href="{{asset('web/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('web/css/responsive.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('web/css/myStyle.css')}}">
     <!--Color Switcher Mockup-->
     <link href="{{asset('web/css/color-switcher-design.css')}}" rel="stylesheet">
     <!--Color Themes-->
     <link id="theme-color-file" href="{{asset('web/css/color-themes/default-theme.css')}}" rel="stylesheet">
 
-
+      
     <link rel="shortcut icon" href="{{asset('web/images/favicon.png')}}" type="image/x-icon">
     <link rel="icon" href="{{asset('web/images/favicon.png')}}" type="image/x-icon">
     @yield("styles")
@@ -33,8 +34,8 @@
     <div class="page-wrapper rtl">
 
         <!-- Preloader -->
-        <div class="preloader">
-
+        <div class="myLoader">
+            <img style="width: 100%;"  src="{{asset('construction-gif-2.gif')}}" alt="">
         </div>
 
         @yield('header')

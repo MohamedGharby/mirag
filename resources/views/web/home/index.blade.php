@@ -72,22 +72,22 @@
 
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li><a href="contact.html">تواصل معنا</a></li>
+                                    <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
                                     
-                                    <li class="dropdown">
+                                    <li>
                                         <a href="#">الأخبار</a>
                                     </li>
                                 
-                                    <li class="dropdown">
+                                    <li>
                                         <a href="#">المشاريع</a>
                                     </li>
 
-                                    <li class="dropdown">
+                                    <li >
                                         <a href="{{url('/about')}}">من نحن</a>
                                     </li>
 
-                                    <li class="current dropdown ">
+                                    <li >
                                         <a href="{{url('/')}}">الرئيسية</a>
                                     </li>
                                 </ul>
@@ -129,7 +129,7 @@
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
+                        <a href="index.html" class="img-responsive"><img src="{{asset('images/logo-small.png')}}" alt="" title=""></a>
                     </div>
 
                     <!--Right Col-->
@@ -146,20 +146,20 @@
 
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                                 <ul class="navigation clearfix">
-                                    <li><a href="contact.html">تواصل معنا</a></li>
+                                    <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
-                                    <li class="dropdown"><a href="#">أخبار</a>
-
-                                    </li>
-
-                                    <li class="dropdown"><a href="#">المشاريع</a>
+                                    <li><a href="#">أخبار</a>
 
                                     </li>
 
-                                    <li class="dropdown"><a href="{{url('/about')}}">من نحن</a>
+                                    <li><a href="#">المشاريع</a>
+
                                     </li>
 
-                                    <li class="current dropdown"><a href="{{ url('/') }}">الصفحة الرئيسية</a>
+                                    <li ><a href="{{url('/about')}}">من نحن</a>
+                                    </li>
+
+                                    <li><a href="{{ url('/') }}">الصفحة الرئيسية</a>
                                     </li>
     
                                 </ul>

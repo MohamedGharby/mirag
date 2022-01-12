@@ -1,0 +1,9 @@
+.myLoader{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 19919199191919919199191;
+    background-color: seashell;
+}

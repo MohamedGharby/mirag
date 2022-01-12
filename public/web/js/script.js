@@ -4,11 +4,16 @@
 	
 	
 	//Hide Loading Box (Preloader)
-	function handlePreloader() {
-		if($('.preloader').length){
-			$('.preloader').delay(200).fadeOut(500);
-		}
-	}
+	// function handlePreloader() {
+	// 	if($('.preloader').length){
+	// 		$('.preloader').delay(200).fadeOut(500);
+	// 	}
+	// }
+
+	document.addEventListener("DOMContentLoaded" , ()=>{
+		
+		$(".myLoader").fadeOut(2000);
+	})
 	
 	
 	//Update Header Style and Scroll to Top
