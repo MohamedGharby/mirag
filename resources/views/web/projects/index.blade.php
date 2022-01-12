@@ -1,8 +1,10 @@
-@extends("web.layout")
-@section("title")
-تواصل معنا
+@extends('web.layout')
+@section('title')
+مشاريع
 @endsection
-@section("header")
+
+@section('header')
+
 <!-- Main Header-->
 <header class="main-header header-style-one">
 
@@ -90,7 +92,7 @@
 
                     <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                         <ul class="navigation clearfix">
-                            <li><a href="contact.html">تواصل معنا</a></li>
+                            <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
                             <li><a href="#">أخبار</a>
 
@@ -172,7 +174,7 @@
 
                             </li>
 
-                            <li><a href="{{ url('/projects')}}">المشاريع</a>
+                            <li><a href="{{ url('/projects') }}">المشاريع</a>
 
                             </li>
 
@@ -195,114 +197,74 @@
 <!--End Main Header -->
 @endsection
 
-@section("main")
-
+@section('main')
 	<!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/13.jpg)">
     	<div class="auto-container">
-        	<h1>Contact Us</h1>
+        	<h1>Projects</h1>
             <ul class="page-breadcrumb">
             	<li><a href="index.html">HOME</a></li>
-                <li>Contact</li>
+                <li>Projects</li>
             </ul>
         </div>
     </section>
     <!--End Page Title-->
 
-    <!--Contact Form Section-->
-    <section class="contact-form-section">
+    <!--Project Page Section-->
+    <section class="project-page-section">
     	<div class="auto-container">
-        	<!--Title Box-->
-        	<div class="title-box">
-            	<div class="title">Write a Message</div>
-                <h2>Have Any Questions?</h2>
-                <div class="text">Thank you very much for your interest in our company and our services and if you have any questions, please write us a message now!</div>
+        	<!--Sec Title-->
+            <div class="sec-title centered">
+            	<div class="title">Our Best Work</div>
+                <h2>Latest Projects</h2>
+                <div class="seperater"></div>
             </div>
+        	<!--MixitUp Galery-->
+            <div class="mixitup-gallery">
 
-            <!--Contact Form-->
-            <div class="contact-form">
-                <form method="post" action="sendemail.php" id="contact-form">
-                    <div class="row clearfix">
-                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="text" name="firstname" value="" placeholder="Your name" required>
-                        </div>
+                <!--Filter-->
+                <div class="filters text-center clearfix">
+                    
+                </div>
+              
+                <div class="filter-list row clearfix">
 
-                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="email" name="email" value="" placeholder="Your Email" required>
-                        </div>
+                    <!--Project Block-->
+                    @foreach ($projects as $project)
+                    
+                    <div class="project-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image">
+								<img src="{{ asset("uploads/$project->img") }}" alt="project image" />
+								<div class="overlay-box">
+									<div class="content">
+										<h3>{{$project->title}}</h3>
+										<div class="see-project">See Project <span class="fa fa-angle-right"></span></div>
+									</div>
+								</div>
+								<!--Overlay Two-->
+								<div class="overlay-two">
+									<div class="overlay-two-inner">
+										<div class="overlay-two-content">
+											<h2>   
+                                                       <a href="{{ url("/projects/$project->id") }}">{{$project->title}}</a></h2>
+											<div class="text">{{$project->desc}}</div>
+											<a href="#" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                    @endforeach
 
-                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                            <textarea name="message" placeholder="Your Massage"></textarea>
-                        </div>
+                <!--Btn Box-->
+                <div class="btn-box text-center">
+                    <a href="projects-single.html" class="theme-btn btn-style-three">More Project</a>
+                </div>
 
-                        <div class="form-group text-center col-lg-12 col-md-12 col-sm-12">
-                            <button type="submit" class="theme-btn message-btn">Send Massage</button>
-                        </div>
-                    </div>
-                </form>
             </div>
-            <!--End Contact Form-->
-
         </div>
     </section>
-    <!--End Contact Form Section-->
-
-	<!--Contact Page Info Section-->
-    <div class="contact-page-info-section">
-
-    	<div class="auto-container">
-        	<div class="row clearfix">
-
-            	<!--Info Column-->
-            	<div class="info-column col-lg-6 col-md-12 col-sm-12">
-                	<div class="inner-column">
-                    	<div class="sec-title">
-                        	<div class="title">Contact us</div>
-                            <h2>Get in Touch</h2>
-                        </div>
-                        <div class="text">Thewebmax ipsum amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat. ipsum dolor sit amet, consectetuer adipiscing. ipsum dolor sit .</div>
-                        <ul class="list-style-two">
-                            <li><span class="icon fa fa-phone"></span>Call us 1-800-555-1234</li>
-                            <li><span class="icon fa fa-envelope"></span>info@emarat.com</li>
-                            <li><span class="icon fa fa-map-marker"></span>Open Hours 09:00 am - 06:00 pm</li>
-                            <li><span class="icon fa fa-clock-o"></span>185, Pickton Near Street, Los  Angeles, USA</li>
-                        </ul>
-                        <ul class="social-icon-two">
-                            <li class="follow">Follow on: </li>
-                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-                            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                            <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!--Map Column-->
-            	<div class="map-column col-lg-6 col-md-12 col-sm-12">
-                	<div class="inner-column">
-
-                        <!--Map Outer-->
-                        <div class="map-outer">
-                            <!--Map Canvas-->
-                            <div class="map-canvas"
-                                data-zoom="12"
-                                data-lat="-37.817085"
-                                data-lng="144.955631"
-                                data-type="roadmap"
-                                data-hue="#ffc400"
-                                data-title="Envato"
-                                data-icon-path="images/icons/map-marker.png"
-                                data-content="Melbourne VIC 3000, Australia<br><a href='mailto:info@youremail.com'>info@youremail.com</a>">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-	</div>  
-
-
+    <!--End Project Page Section-->
 @endsection

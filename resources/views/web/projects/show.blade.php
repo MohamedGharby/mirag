@@ -1,9 +1,12 @@
 @extends("web.layout")
-@section("title")
-تواصل معنا
+
+@section('title')
+  مشروع
 @endsection
-@section("header")
-<!-- Main Header-->
+
+
+@section('header')
+
 <header class="main-header header-style-one">
 
     <!--Header Top-->
@@ -96,7 +99,7 @@
 
                             </li>
 
-                            <li><a href="{{ url('/projects')}}">المشاريع</a>
+                            <li><a href="#">المشاريع</a>
 
                             </li>
 
@@ -172,7 +175,7 @@
 
                             </li>
 
-                            <li><a href="{{ url('/projects')}}">المشاريع</a>
+                            <li><a href="#">المشاريع</a>
 
                             </li>
 
@@ -192,108 +195,95 @@
     <!--End Sticky Header-->
 
 </header>
-<!--End Main Header -->
+
 @endsection
 
-@section("main")
 
-	<!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/13.jpg)">
+@section('main')
+
+<section class="page-title" style="background-image:url(images/background/13.jpg)">
     	<div class="auto-container">
-        	<h1>Contact Us</h1>
+        	<h1>Projects Detail</h1>
             <ul class="page-breadcrumb">
             	<li><a href="index.html">HOME</a></li>
-                <li>Contact</li>
+                <li>Projects</li>
             </ul>
         </div>
     </section>
     <!--End Page Title-->
 
-    <!--Contact Form Section-->
-    <section class="contact-form-section">
+    <!--Projects Single Section-->
+    <section class="project-single-section">
     	<div class="auto-container">
-        	<!--Title Box-->
-        	<div class="title-box">
-            	<div class="title">Write a Message</div>
-                <h2>Have Any Questions?</h2>
-                <div class="text">Thank you very much for your interest in our company and our services and if you have any questions, please write us a message now!</div>
-            </div>
+        	<div class="upper-section">
+            	<div class="row clearfix">
 
-            <!--Contact Form-->
-            <div class="contact-form">
-                <form method="post" action="sendemail.php" id="contact-form">
-                    <div class="row clearfix">
-                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="text" name="firstname" value="" placeholder="Your name" required>
-                        </div>
-
-                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="email" name="email" value="" placeholder="Your Email" required>
-                        </div>
-
-                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                            <textarea name="message" placeholder="Your Massage"></textarea>
-                        </div>
-
-                        <div class="form-group text-center col-lg-12 col-md-12 col-sm-12">
-                            <button type="submit" class="theme-btn message-btn">Send Massage</button>
+                    <!--Image Column-->
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                    	<div class="image">
+                        	<img src="{{ asset("uploads/$project->img") }}" alt="" />
                         </div>
                     </div>
-                </form>
-            </div>
-            <!--End Contact Form-->
 
-        </div>
-    </section>
-    <!--End Contact Form Section-->
-
-	<!--Contact Page Info Section-->
-    <div class="contact-page-info-section">
-
-    	<div class="auto-container">
-        	<div class="row clearfix">
-
-            	<!--Info Column-->
-            	<div class="info-column col-lg-6 col-md-12 col-sm-12">
-                	<div class="inner-column">
-                    	<div class="sec-title">
-                        	<div class="title">Contact us</div>
-                            <h2>Get in Touch</h2>
+                    <!--Info Column-->
+                    <div class="info-column col-lg-6 col-md-12 col-sm-12">
+                    	<div class="inner-column">
+                        	<h2><span class="theme_color">Project</span> Information</h2>
+                            <div class="text">{{$project->title}}</div>
+                            <ul class="info-list">
+                            	<li><span>Client:</span>{{$project->client}}</li>
+                                <li><span>Location:</span>{{$project->location}}</li>
+                                <li><span>Surface Area:</span>{{$project->surface_area}}</li>
+                                <li><span>Year Completed:</span>{{$project->year}}</li>
+                               
+                            </ul>
                         </div>
-                        <div class="text">Thewebmax ipsum amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat. ipsum dolor sit amet, consectetuer adipiscing. ipsum dolor sit .</div>
-                        <ul class="list-style-two">
-                            <li><span class="icon fa fa-phone"></span>Call us 1-800-555-1234</li>
-                            <li><span class="icon fa fa-envelope"></span>info@emarat.com</li>
-                            <li><span class="icon fa fa-map-marker"></span>Open Hours 09:00 am - 06:00 pm</li>
-                            <li><span class="icon fa fa-clock-o"></span>185, Pickton Near Street, Los  Angeles, USA</li>
-                        </ul>
-                        <ul class="social-icon-two">
-                            <li class="follow">Follow on: </li>
-                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-                            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                            <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
-                        </ul>
                     </div>
+
                 </div>
 
-                <!--Map Column-->
-            	<div class="map-column col-lg-6 col-md-12 col-sm-12">
-                	<div class="inner-column">
+                <!--Lower Section-->
+                <div class="lower-section">
+                    <div class="row clearfix">
 
-                        <!--Map Outer-->
-                        <div class="map-outer">
-                            <!--Map Canvas-->
-                            <div class="map-canvas"
-                                data-zoom="12"
-                                data-lat="-37.817085"
-                                data-lng="144.955631"
-                                data-type="roadmap"
-                                data-hue="#ffc400"
-                                data-title="Envato"
-                                data-icon-path="images/icons/map-marker.png"
-                                data-content="Melbourne VIC 3000, Australia<br><a href='mailto:info@youremail.com'>info@youremail.com</a>">
+                        <!--Content Column-->
+                        <div class="content-column col-lg-8 col-md-12 col-sm-12">
+                        	<div class="inner-column">
+                            	<h2>Project Descripation</h2>
+                                <div class="text">
+                                    <p>{{$project->desc}}</p>
+                                    <h3>Project Challenge</h3>
+                                    <div class="row clearfix">
+                                    	<div class="column col-lg-6 col-md-6 col-sm-12">
+                                        	<ul class="list-style-five">
+                                            	<li>Five passengers set sail that day for a three hour</li>
+                                                <li>Family that’s the way we all became the brady</li>
+                                                <li>The powerless in a world of criminals operate</li>
+                                            </ul>
+                                        </div>
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                        	<ul class="list-style-five">
+                                            	<li>Till the one day when the lady met this fellow</li>
+                                                <li>Champion the cause of the innocent career</li>
+                                                <li>Now were up in the big leagues getting’ turn</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3>What We Did</h3>
+                                    <p>Then along come two they got nothin’ but their jeans. Texas tea. Knight Rider: A shadowy flight into the dangerous world of a man who does not exist. The first mate and his Skipper too will do their very best to make the others comfortable in their tropic island nest.</p>
+                                    <h3>RESULT</h3>
+                                    <p>That’s just a little bit more than the law will allow. We’re gonna do it. On your mark get set and go now. Got a dream and we just know now we’re gonna make our dream come true. Makin their way the only way they know how. That’s just a little bit more than the law will allow.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Contact Column-->
+                        <div class="contact-column col-lg-4 col-md-12 col-sm-12">
+                        	<div class="inner-column" style="background-image:url(images/background/pattern-1.png)">
+                            	<div class="title">Quick Contact</div>
+                                <h2>Get Solution</h2>
+                                <div class="text">Contact us at the Constration office nearest to you or submit a business inquiry online.</div>
+                                <a href="#" class="theme-btn contact-btn">Contact</a>
                             </div>
                         </div>
 
@@ -302,7 +292,36 @@
 
             </div>
         </div>
-	</div>  
+    </section>
+    <!--End Projects Single Section-->
 
-
+    <!--Subscribe Section-->
+    <section class="subscribe-section">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+            	<!--Form Column-->
+            	<div class="title-column col-lg-6 col-md-12 col-sm-12">
+                	<h2>Need more information?</h2>
+                    <div class="text">Please email us and our support staff will contact you back</div>
+                    <div class="icon-box">
+                    	<span class="icon flaticon-envelope-1"></span>
+                    </div>
+                </div>
+                <!--Form Column-->
+                <div class="form-column col-lg-6 col-md-12 col-sm-12">
+                	<div class="inner-column">
+                        <div class="subscribe-form">
+                            <form method="post" action="contact.html">
+                                <div class="form-group">
+                                    <input type="email" name="email" value="" placeholder="Enter your mail" required>
+                                    <button type="submit" class="theme-btn">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Subscribe Section-->
 @endsection
