@@ -247,9 +247,17 @@
 									<div class="overlay-two-inner">
 										<div class="overlay-two-content">
 											<h2>   
-                                                       <a href="{{ url("/projects/$project->id") }}">{{$project->title}}</a></h2>
-											<div class="text">{{$project->desc}}</div>
-											<a href="#" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
+                                                <a href="{{ url("/projects/$project->id") }}">{{$project->title}}</a></h2>
+                                               @if (strlen($project->desc) > 100)
+                                                   @php
+                                                     $project->desc = substr($project->desc , 0 , 100);
+                                                     @endphp
+											       <div class="text">{{$project->desc}}</div>
+                                                @else
+                                                   <div class="text">{{$project->desc}}</div>
+                                                   
+                                                @endif      
+											<a href="{{ url("/projects/$project->id") }}" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
 										</div>
 									</div>
 								</div>
