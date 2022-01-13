@@ -523,6 +523,7 @@
             <div class="row clearfix">
 
                 <!--Team Block-->
+                @foreach ($experts as $expert)
                 <div class="team-block col-lg-4 col-md-6 col-sm-12">
                 	<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                     	<ul class="social-icon-one">
@@ -532,52 +533,20 @@
                             <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
                         </ul>
                     	<div class="image">
-                        	<img src="{{ asset('web/images/resource/team-1.png') }}" alt="" />
+                        	<img src="{{ asset("uploads/$expert->img") }}" alt="" />
                         </div>
                         <div class="lower-box">
-                        	<h3><a href="#">Celsiya Malcom</a></h3>
-                            <div class="designation">Builder Advisor</div>
+                        	<h3><a href="#">{{$expert->name}}</a></h3>
+                            <div class="designation">{{$expert->title}}</div>
                         </div>
                     </div>
                 </div>
+                @endforeach
 
-                <!--Team Block-->
-                <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box wow slideInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<ul class="social-icon-one">
-                        	<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                            <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
-                            <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
-                        </ul>
-                    	<div class="image">
-                        	<img src="{{ asset('web/images/resource/team-1.png') }}" alt="" />
-                        </div>
-                        <div class="lower-box">
-                        	<h3><a href="#">Andrea Spilber</a></h3>
-                            <div class="designation">Project Manager</div>
-                        </div>
-                    </div>
-                </div>
+                
 
-                <!--Team Block-->
-                <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<ul class="social-icon-one">
-                        	<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                            <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
-                            <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
-                        </ul>
-                    	<div class="image">
-                        	<img src="{{ asset('web/images/resource/team-1.png') }}" alt="" />
-                        </div>
-                        <div class="lower-box">
-                        	<h3><a href="#">Nelson Mecoy</a></h3>
-                            <div class="designation">Architecture</div>
-                        </div>
-                    </div>
-                </div>
+            
+                
 
             </div>
 

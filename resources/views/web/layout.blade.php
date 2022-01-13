@@ -50,7 +50,7 @@
 
 
         <!--Main Footer-->
-        <footer class="main-footer" style="background-image:url(images/background/6.jpg)">
+        <footer class="main-footer" style="background-image:url(web/images/background/6.jpg)">
 
             <div class="auto-container">
 
