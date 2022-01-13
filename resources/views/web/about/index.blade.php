@@ -175,7 +175,7 @@
 
                                 </li>
 
-                                <li><a href="#">المشاريع</a>
+                                <li><a href="{{url('/projects')}}">المشاريع</a>
 
                                 </li>
 

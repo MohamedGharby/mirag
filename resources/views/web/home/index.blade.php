@@ -327,12 +327,17 @@
                 <div class="content-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="sec-title">
-                            <div class="title">About Us</div>
-                            <h2>We Are The Leader in The Architectura!</h2>
+                            <div class="title">من نحن</div>
+                            <h2>شركة ميراج للمقاولات</h2>
                         </div>
-                        <div class="bold-text">36 Years Experience Working</div>
-                        <div class="text">For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other</div>
-                        <a href="#" class="theme-btn btn-style-one">Read More</a>
+                        <div class="bold-text">شركة ميراج للمقاولات تاسست سنه (2009) و اكتسبت الافضلية و التميز بين الشركات و بشهادة البنوك و شركات التمويل المالى 
+                                و نزاهة التعامل مع الكل و ثقة العملاء ,و لنا العديد من العقود المبرمة بين القطاع الحكومي و الاهلية مع الشركات, و قد تخصصت منذ انطلاقها فى اعمال المقاولات المختلفة . وتتمثل فى:-
+                                م/عاطف الشيخ (رئيس مجلس الادارة للشركة )
+                                اللواء/ محمد الروبى (نائب رئيس مجلس الادارة)
+                                م/ عاطف طه العضو المنتدب للتنفيذ
+                                و بخبرتهم الكبيره فى مجال الطرق و الكبارى مع كبرى الشركات</div>
+                       
+                        <a href="{{ url('/about')}}" class="theme-btn btn-style-one">للمزيد..</a>
                     </div>
                 </div>
 
@@ -471,7 +476,7 @@
                         	<div class="project-block">
                             	<div class="inner-box">
                                 	<div class="image">
-                                        <img src="images/gallery/1.jpg" alt="" />
+                                        <img src="{{asset('web/images/gallery/1.jpg')}}" alt="" />
                                         <div class="overlay-box">
                                         	<div class="content">
                                             	<h3>Triangle Concrete House On Lake</h3>
