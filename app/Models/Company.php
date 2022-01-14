@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class InvestmentImg extends Model
+class Company extends Model
 {
     use HasFactory;
+
     protected $guarded = [
         "id","created_at","updated_at"
     ];
 
-    public function investment()
+    public function investments( )
     {
-        return $this->belongsTo(Investment::class);
+        return $this->hasMany(Investment::class);
     }
 }

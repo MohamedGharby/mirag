@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             Latestseeder::class,
             Commentseeder::class,
             Expertseeder::class,
+            CompanySeeder::class,
         ] );
     }
 }
