@@ -214,47 +214,43 @@
     	<div class="auto-container">
         	<!--Title Box-->
         	<div class="title-box">
-            	<div class="title">Write a Message</div>
-                <h2>Have Any Questions?</h2>
-                <div class="text">Thank you very much for your interest in our company and our services and if you have any questions, please write us a message now!</div>
+            	<div class="title">ارسب لنا رسالة</div>
+                <h2>لديك ايه اسئلة ؟</h2>
+                <div class="text">شكرا لاهتمامك بشركتنا و خدمتنا و نرجو ان كان لديك ايه اسئلة لا تتردد في التواصل معنا</div>
             </div>
 
             <!--Contact Form-->
             <div class="contact-form">
-                <form method="post" action="{{ url('contact/message') }}" id="contact-form">
+                <form  id="contact-form">
                      @csrf
-                     @if($errors->any())
-                        <div class="alert alert-danger">
-                        @foreach ($errors->all() as $error)
-                           {{$error}}
-                         @endforeach
+                    
+                        <div id="errorMsg" class="alert alert-danger">
                          </div>
-                     @endif
+                     
                     <div class="row clearfix">
                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="text" name="name" value="" placeholder="الاسم" >
+                            <input class="form-data" type="text" name="name" value="" placeholder="الاسم" >
                         </div>
 
                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="email" name="email" value="" placeholder="البريد الالكتروني" >
+                            <input class="form-data" type="email" name="email" value="" placeholder="البريد الالكتروني" >
                         </div>
                         <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                            <input class="" id="phone" name="phone_number" type="text" placeholder="رقم الهاتف">
+                            <input class="form-data" id="phone" name="phone_number" type="text" placeholder="رقم الهاتف">
                         </div>
 
                         <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                            <textarea name="body" placeholder="الرسالة"></textarea>
+                            <textarea class="form-data" name="body" placeholder="الرسالة"></textarea>
                         </div>
 
                         <div class="form-group text-center col-lg-12 col-md-12 col-sm-12">
-                            <button type="submit" class="theme-btn message-btn">تواصل</button>
+                            <button id="contact-form-btn" type="submit" class="theme-btn message-btn">تواصل</button>
+                            <div id="sucmsg" class="alert alert-success mt-3">
+                             </div>
                         </div>
-                        @if (session('success'))
-                        <div id="sucmsg" class="alert alert-success">
-                            {{session("success")}}
-
-                        </div>
-                        @endif
+                        
+                        
+                        
                         
                     </div>
                 </form>
@@ -325,3 +321,45 @@
 
 @endsection
 
+@section("scripts")
+<script>
+    
+
+   $("#sucmsg").hide();
+   $('#errorMsg').hide();
+
+   $('#contact-form-btn').click(function(e){
+    $("#sucmsg").hide();
+    $('#errorMsg').hide();
+    $("#sucmsg").empty();
+    $('#errorMsg').empty();
+   
+      e.preventDefault();
+      let formData = new FormData($("#contact-form")[0]);
+
+      $.ajax({
+          type: "POST",
+          url: '{{ url("contact/message") }}',
+          data: formData,
+          contentType: false,
+          processData: false,
+
+          success: function (data){
+            $("#sucmsg").show();
+            $("#sucmsg").text(data.success);
+              
+          }, error: function(xhr , status , error) {
+            $('#errorMsg').show();
+              $.each(xhr.responseJSON.errors , function(key , item) {
+                $('#errorMsg').append("<p>" +item+ "</p");
+              })
+          }
+      })
+   })
+
+
+
+</script>
+
+
+@endsection
