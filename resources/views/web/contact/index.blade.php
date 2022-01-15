@@ -202,8 +202,8 @@
     	<div class="auto-container">
         	<h1>Contact Us</h1>
             <ul class="page-breadcrumb">
-            	<li><a href="index.html">HOME</a></li>
-                <li>Contact</li>
+            	<li><a href="index.html">الرئيسية</a></li>
+                <li>نواصل معنا</li>
             </ul>
         </div>
     </section>
@@ -221,23 +221,41 @@
 
             <!--Contact Form-->
             <div class="contact-form">
-                <form method="post" action="sendemail.php" id="contact-form">
+                <form method="post" action="{{ url('contact/message') }}" id="contact-form">
+                     @csrf
+                     @if($errors->any())
+                        <div class="alert alert-danger">
+                        @foreach ($errors->all() as $error)
+                           {{$error}}
+                         @endforeach
+                         </div>
+                     @endif
                     <div class="row clearfix">
                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="text" name="firstname" value="" placeholder="Your name" required>
+                            <input type="text" name="name" value="" placeholder="الاسم" >
                         </div>
 
                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="email" name="email" value="" placeholder="Your Email" required>
+                            <input type="email" name="email" value="" placeholder="البريد الالكتروني" >
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                            <input class="" id="phone" name="phone_number" type="text" placeholder="رقم الهاتف">
                         </div>
 
                         <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                            <textarea name="message" placeholder="Your Massage"></textarea>
+                            <textarea name="body" placeholder="الرسالة"></textarea>
                         </div>
 
                         <div class="form-group text-center col-lg-12 col-md-12 col-sm-12">
-                            <button type="submit" class="theme-btn message-btn">Send Massage</button>
+                            <button type="submit" class="theme-btn message-btn">تواصل</button>
                         </div>
+                        @if (session('success'))
+                        <div id="sucmsg" class="alert alert-success">
+                            {{session("success")}}
+
+                        </div>
+                        @endif
+                        
                     </div>
                 </form>
             </div>
@@ -306,3 +324,4 @@
 
 
 @endsection
+

@@ -182,7 +182,7 @@
                 <h2 class="text-warning">{{ $company->name }}</h2>
             </div>
             <div class="three-item-carousel owl-carousel owl-theme">
-                @foreach ($invests as $invest)
+                @foreach ($company->investments as $invest)
                     
                 <!--Services Block Two-->
                 <div class="services-block-two">

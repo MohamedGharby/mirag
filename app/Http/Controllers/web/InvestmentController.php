@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 
 class InvestmentController extends Controller
 {
-    public function index(Investment $investment)
+    public function index()
     {
         $data["companies"] = Company::select("id" , "name")->get();
-       $companyId = Company::select('id')->first()->id;
-        $data["invests"] = Investment::orderBy('id' , 'DESC')->where("company_id" , $companyId)->get();
+        //$companyId = Company::select('id')->first()->id;
+       // $data["invests"] = Investment::orderBy('id' , 'DESC')->where("company_id" , $companyId)->get();
         return view('web.investments.index')->with($data);
     }
 }

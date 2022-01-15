@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class , "index"]);
 Route::get('/about', [AboutController::class , "index"]);
 Route::get('/contact', [ContactController::class , 'index']);
+Route::post('/contact/message' , [ContactController::class , 'sendMessage']);
 Route::get('/projects' , [ProjectsController::class , 'index']);
 Route::get('/projects/{projectId}' , [ProjectsController::class , 'show']);
 Route::get('/latests', [WebLatestController::class , 'index']);

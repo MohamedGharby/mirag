@@ -149,7 +149,7 @@
                                 <ul class="navigation clearfix">
                                     <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
-                                    <li><a href="#">الإستثمار العقارى</a></li>
+                                    <li><a href="{{ url('/investments') }}">الإستثمار العقارى</a></li>
 
                                     <li><a href="{{url('/latests')}}">أخبارنا</a></li>
 
@@ -361,7 +361,7 @@
                 </div>
             </div>
         </div>
-        <div class="outer-image"><img src="{{asset('images/resource/image-1.png')}}" alt="" /></div>
+        <div class="outer-image"><img src="{{asset('web/images/resource/image-1.png')}}" alt="" /></div>
     </div>
     <!--End Fun Facts Section-->
 
