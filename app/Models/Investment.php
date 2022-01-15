@@ -13,10 +13,13 @@ class Investment extends Model
         "id","created_at","updated_at"
     ];
 
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
+
     public function investmentImgs( )
     {
-        # code...
-
         return $this->hasMany(InvestmentImg::class);
     }
 }

@@ -74,9 +74,10 @@
                                 <ul class="navigation clearfix">
                                     <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
+                                    <li><a href="#">الإستثمار العقارى</a></li>
                                     
                                     <li>
-                                        <a href="#">الأخبار</a>
+                                        <a href="{{url('/latests')}}">أخبارنا</a>
                                     </li>
                                 
                                     <li>
@@ -87,7 +88,7 @@
                                         <a href="{{url('/about')}}">من نحن</a>
                                     </li>
 
-                                    <li >
+                                    <li class="current">
                                         <a href="{{url('/')}}">الرئيسية</a>
                                     </li>
                                 </ul>
@@ -148,19 +149,15 @@
                                 <ul class="navigation clearfix">
                                     <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
-                                    <li><a href="#">أخبار</a>
+                                    <li><a href="#">الإستثمار العقارى</a></li>
 
-                                    </li>
+                                    <li><a href="{{url('/latests')}}">أخبارنا</a></li>
 
-                                    <li><a href="{{ url('/projects')}}">المشاريع</a>
+                                    <li><a href="{{ url('/projects')}}">المشاريع</a></li>
 
-                                    </li>
+                                    <li ><a href="{{url('/about')}}">من نحن</a></li>
 
-                                    <li ><a href="{{url('/about')}}">من نحن</a>
-                                    </li>
-
-                                    <li><a href="{{ url('/') }}">الصفحة الرئيسية</a>
-                                    </li>
+                                    <li class="current"><a href="{{ url('/') }}">الصفحة الرئيسية</a></li>
     
                                 </ul>
 
@@ -188,8 +185,8 @@
             <div class="rev_slider fullwidthabanner" id="rev_slider_three" data-version="5.4.1">
                 <ul>
 
-                	<li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/main-slider/image-6.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{{asset('web/images/main-slider/image-6.jpg')}}">
+                	<li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{{ asset('web/images/main-slider/test1.jpg') }}{{-- images/main-slider/image-6.jpg --}}" data-title="Slide Title" data-transition="parallaxvertical">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{{ asset('web/images/main-slider/test1.jpg') }}{{-- asset('web/images/main-slider/image-6.jpg') --}}">
 
                     <div class="tp-caption"
                     data-paddingbottom="[0,0,0,0]"
@@ -250,8 +247,8 @@
 
                     </li>
 
-                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/main-slider/image-1.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{{asset('web/images/main-slider/image-1.jpg')}}">
+                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{{ asset('web/images/main-slider/test2.jpg') }}{{-- images/main-slider/image-1.jpg --}}" data-title="Slide Title" data-transition="parallaxvertical">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{{ asset('web/images/main-slider/test2.jpg') }}{{-- asset('web/images/main-slider/image-1.jpg') --}}">
 
                     <div class="tp-caption"
                     data-paddingbottom="[0,0,0,0]"
@@ -345,7 +342,7 @@
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="image wow slideInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <img src="images/resource/about.jpg" alt="" />
+                            <img src="{{ asset('web/images/resource/about.jpg') }}" alt="" />
                         </div>
                     </div>
                 </div>
@@ -356,7 +353,7 @@
     <!--End About Section-->
 
     <!--Fun Facts Section-->
-    <div class="fact-counter-section" style="background-image:url(images/background/2.jpg);">
+    <div class="fact-counter-section" style="background-image:url(web/images/main-slider/test1.jpg);">
         <div class="fact-counter">
             <div class="auto-container">
                 <div class="row clearfix">
@@ -458,7 +455,7 @@
                 <!--Sec Title-->
                 <div class="sec-title light">
                 	<div class="clearfix">
-                        <div class="pull-left">
+                        <div class="pull-right">
                             <div class="title">أفضل مشاريعنا</div>
                             <h2>أفضل مشاريعنا</h2>
                         </div>
@@ -560,68 +557,28 @@
     <section class="news-section">
     	<div class="auto-container">
         	<div class="sec-title centered">
-            	<div class="title">Our Blog</div>
-                <h2>Our Latest News</h2>
+            	<div class="title">أخبارنا</div>
+                <h2>أحدث أخبارنا</h2>
                 <div class="seperater"></div>
             </div>
             <div class="row clearfix">
-
-                <!--News Block-->
+                @foreach ($latests as $latest)
+                
                 <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box">
-                    	<div class="image">
-                        	<a href="blog-detail.html"><img src="{{ asset('web/images/resource/news-1.jpg') }}" alt="" /></a>
-                            <div class="post-date"><span>18</span> June</div>
+                    <div class="inner-box">
+                        <div class="image">
+                            <a href="{{ url("latests/$latest->id") }}"><img src="{{ asset("uploads/$latest->main_img") }}" alt="" /></a>
+                            <div class="post-date"><span>{{ $latest->created_at->format('d') }}</span> {{ $latest->created_at->format('M') }}</div>
                         </div>
                         <div class="lower-content">
-                        	<h3><a href="blog-detail.html">High quality work for our customer.</a></h3>
-                            <ul class="post-meta">
-                            	<li>24 Liks</li>
-                                <li>3 Comments</li>
-                                <li>By Admin Rose </li>
-                            </ul>
-                            <div class="text">Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci ante. Proin amet turpis l......</div>
+                            <h3><a href="{{ url("latests/$latest->id") }}">{{ Str::limit($latest->title , 50 , '.') }}</a></h3>
+
+                            <div class="text">{{ Str::limit($latest->desc , 150 , '...') }}</div>
                         </div>
                     </div>
                 </div>
+            @endforeach  
 
-                <!--News Block-->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box">
-                    	<div class="image">
-                        	<a href="blog-detail.html"><img src="{{ asset('web/images/resource/news-2.jpg') }}" alt="" /></a>
-                            <div class="post-date"><span>18</span> June</div>
-                        </div>
-                        <div class="lower-content">
-                        	<h3><a href="blog-detail.html">Satisfection for the customer our first parity.</a></h3>
-                            <ul class="post-meta">
-                            	<li>24 Liks</li>
-                                <li>3 Comments</li>
-                                <li>By Admin Rose </li>
-                            </ul>
-                            <div class="text">Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci ante. Proin amet turpis l......</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--News Block-->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box">
-                    	<div class="image">
-                        	<a href="blog-detail.html"><img src="{{ asset('web/images/resource/news-3.jpg') }}" alt="" /></a>
-                            <div class="post-date"><span>18</span> June</div>
-                        </div>
-                        <div class="lower-content">
-                        	<h3><a href="blog-detail.html">Professional approch is always quality work.</a></h3>
-                            <ul class="post-meta">
-                            	<li>24 Liks</li>
-                                <li>3 Comments</li>
-                                <li>By Admin Rose </li>
-                            </ul>
-                            <div class="text">Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci ante. Proin amet turpis l......</div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>

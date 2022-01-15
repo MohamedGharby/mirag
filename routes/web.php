@@ -3,8 +3,9 @@
 use App\Http\Controllers\web\AboutController;
 use App\Http\Controllers\web\ContactController;
 use App\Http\Controllers\web\HomeController;
+use App\Http\Controllers\web\InvestmentController;
+use App\Http\Controllers\web\LatestController as WebLatestController;
 use App\Http\Controllers\web\ProjectsController;
-use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,8 @@ Route::get('/about', [AboutController::class , "index"]);
 Route::get('/contact', [ContactController::class , 'index']);
 Route::get('/projects' , [ProjectsController::class , 'index']);
 Route::get('/projects/{projectId}' , [ProjectsController::class , 'show']);
+Route::get('/latests', [WebLatestController::class , 'index']);
+Route::get('/latests/{latestId}', [WebLatestController::class , 'show']);
+Route::get('/investments', [InvestmentController::class , 'index']);
+
+

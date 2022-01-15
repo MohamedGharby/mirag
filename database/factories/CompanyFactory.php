@@ -2,12 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\Investment;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class InvestmentFactory extends Factory
+class CompanyFactory extends Factory
 {
-    protected $model = Investment::class;
     /**
      * Define the model's default state.
      *
@@ -16,8 +14,7 @@ class InvestmentFactory extends Factory
     public function definition()
     {
         return [
-            "project_name" => $this->faker->sentence(4),
-            "desc" => $this->faker->sentence(40),
+            "name" => $this->faker->company()
         ];
     }
 }

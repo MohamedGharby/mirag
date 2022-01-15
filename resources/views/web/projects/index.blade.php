@@ -94,11 +94,13 @@
                         <ul class="navigation clearfix">
                             <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
-                            <li><a href="#">أخبار</a>
+                            <li><a href="#">الإستثمار العقارى</a></li>
+
+                            <li><a href="{{url('/latests')}}">أخبارنا</a>
 
                             </li>
 
-                            <li><a href="{{ url('/projects')}}">المشاريع</a>
+                            <li class="current"><a href="{{ url('/projects')}}">المشاريع</a>
 
                             </li>
 
@@ -170,11 +172,13 @@
                         <ul class="navigation clearfix">
                             <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
-                            <li><a href="#">أخبار</a>
+                            <li><a href="#">الإستثمار العقارى</a></li>
+
+                            <li><a href="{{url('/latests')}}">أخبارنا</a>
 
                             </li>
 
-                            <li><a href="{{ url('/projects') }}">المشاريع</a>
+                            <li class="current"><a href="{{ url('/projects') }}">المشاريع</a>
 
                             </li>
 
