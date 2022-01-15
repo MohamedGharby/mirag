@@ -10,10 +10,10 @@
     <link href="{{asset('web/plugins/revolution/css/layers.css')}}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
     <link href="{{asset('web/plugins/revolution/css/navigation.css')}}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
     <link href="{{asset('web/css/style.css')}}" rel="stylesheet">
-    <link href="{{asset('web/css/responsive.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('web/css/myStyle.css')}}">
+    <link href="{{asset('web/css/responsive.css')}}" rel="stylesheet">
     <!--Color Switcher Mockup-->
-    <link href="{{asset('web/css/color-switcher-design.css')}}" rel="stylesheet">
+    <!-- <link href="{{asset('web/css/color-switcher-design.css')}}" rel="stylesheet"> -->
     <!--Color Themes-->
     <link id="theme-color-file" href="{{asset('web/css/color-themes/default-theme.css')}}" rel="stylesheet">
 
@@ -227,7 +227,7 @@
     <script src="{{asset('web/js/wow.js')}}"></script>
     <script src="{{asset('web/js/jquery-ui.js')}}"></script>
     <script src="{{asset('web/js/script.js')}}"></script>
-    <script src="{{asset('web/js/color-settings.js')}}"></script>
+    <!-- <script src="{{asset('web/js/color-settings.js')}}"></script> -->
     @yield("scripts")
 
 </body>
