@@ -369,8 +369,8 @@
     <section class="services-section">
     	<div class="auto-container">
         	<div class="sec-title centered">
-            	<div class="title">Our Services</div>
-                <h2>Whats Our Offers</h2>
+            	<div class="title">خدماتنا</div>
+                <h2>ماذا نقدم </h2>
                 <div class="seperater"></div>
             </div>
             <div class="row clearfix">
@@ -512,8 +512,8 @@
     	<div class="auto-container">
         	<!--Sec Title-->
         	<div class="sec-title centered">
-            	<div class="title">Our Team</div>
-                <h2>Our Best Experts</h2>
+            	<div class="title">فريق العمل</div>
+                <h2>خبرائنا</h2>
                 <div class="seperater"></div>
             </div>
 

@@ -200,7 +200,7 @@
 	<!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/13.jpg)">
     	<div class="auto-container">
-        	<h1>Contact Us</h1>
+        	<h1>تواصل معنا</h1>
             <ul class="page-breadcrumb">
             	<li><a href="index.html">الرئيسية</a></li>
                 <li>نواصل معنا</li>
@@ -271,8 +271,8 @@
             	<div class="info-column col-lg-6 col-md-12 col-sm-12">
                 	<div class="inner-column">
                     	<div class="sec-title">
-                        	<div class="title">Contact us</div>
-                            <h2>Get in Touch</h2>
+                        	<div class="title">تواصل معنا</div>
+                            <h2>كن على تواصل</h2>
                         </div>
                         <div class="text">Thewebmax ipsum amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat. ipsum dolor sit amet, consectetuer adipiscing. ipsum dolor sit .</div>
                         <ul class="list-style-two">

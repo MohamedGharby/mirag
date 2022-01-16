@@ -34,7 +34,7 @@
             <div class="clearfix">
 
                 <div class="pull-left logo-box">
-                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
+                    <div class="logo"><a href="index.html"><img src="{{ url('web/images/logo.png') }}" alt="" title=""></a></div>
                 </div>
 
                 <div class="pull-right upper-right clearfix">
@@ -94,7 +94,7 @@
                         <ul class="navigation clearfix">
                             <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
-                            <li><a href="#">الإستثمار العقارى</a></li>
+                            <li><a href="{{ url('/investments') }}">الإستثمار العقارى</a></li>
 
                             <li><a href="{{url('/latests')}}">أخبارنا</a>
 
@@ -120,27 +120,7 @@
                 <div class="outer-box clearfix">
 
                     <!--Search Box-->
-                    <div class="search-box-outer">
-                        <div class="dropdown">
-                            <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                            <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                                <li class="panel-outer">
-                                    <div class="form-container">
-                                        <form method="post" action="blog.html">
-                                            <div class="form-group">
-                                                <input type="search" name="field-name" value="" placeholder="Search Here" required>
-                                                <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="advisor-box">
-                        <a href="index.html" class="theme-btn advisor-btn">Get A Quote</a>
-                    </div>
+                    
 
                 </div>
             </div>
@@ -172,7 +152,7 @@
                         <ul class="navigation clearfix">
                             <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
-                            <li><a href="#">الإستثمار العقارى</a></li>
+                            <li><a href="{{ url('/investments') }}">الإستثمار العقارى</a></li>
 
                             <li><a href="{{url('/latests')}}">أخبارنا</a>
 
@@ -205,10 +185,10 @@
 	<!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/13.jpg)">
     	<div class="auto-container">
-        	<h1>Projects</h1>
+        	<h1>المشاريع</h1>
             <ul class="page-breadcrumb">
-            	<li><a href="index.html">HOME</a></li>
-                <li>Projects</li>
+            	<li><a href="index.html">الرئيسية</a></li>
+                <li>المشاريع</li>
             </ul>
         </div>
     </section>
@@ -219,8 +199,8 @@
     	<div class="auto-container">
         	<!--Sec Title-->
             <div class="sec-title centered">
-            	<div class="title">Our Best Work</div>
-                <h2>Latest Projects</h2>
+            	<div class="title">أخر اعمالنا</div>
+                <h2>المشاريع</h2>
                 <div class="seperater"></div>
             </div>
         	<!--MixitUp Galery-->
@@ -270,10 +250,8 @@
 					</div>
                     @endforeach
 
-                <!--Btn Box-->
-                <div class="btn-box text-center">
-                    <a href="projects-single.html" class="theme-btn btn-style-three">More Project</a>
-                </div>
+                <!--Pagintaot-->
+                {{ $projects->links('web.inc.paginate') }}
 
             </div>
         </div>

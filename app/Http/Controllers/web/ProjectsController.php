@@ -12,7 +12,7 @@ class ProjectsController extends Controller
 
     public function index(){
 
-        $data['projects'] = Project::select("title" ,"desc"  ,"img" , "id" )->limit(4)->get();
+        $data['projects'] = Project::select("title" ,"desc"  ,"img" , "id" )->paginate(8);
 
         
         
