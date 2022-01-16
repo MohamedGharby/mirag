@@ -94,23 +94,17 @@
                         <ul class="navigation clearfix">
                             <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
+                            <li><a href="{{ url('/team') }}">فريقنا</a></li>
+
                             <li><a href="{{ url('/investments') }}">الإستثمار العقارى</a></li>
 
-                            <li><a href="{{url('/latests')}}">أخبارنا</a>
+                            <li><a href="{{url('/latests')}}">أخبارنا</a></li>
 
-                            </li>
+                            <li class="current"><a href="{{ url('/projects')}}">المشاريع</a></li>
 
-                            <li class="current"><a href="{{ url('/projects')}}">المشاريع</a>
+                            <li><a href="{{url('/about')}}">من نحن</a></li>
 
-                            </li>
-
-                            <li>
-                                <a href="{{url('/about')}}">من نحن</a>
-                            </li>
-
-                            <li>
-                                <a href="{{ url('/') }}">الصفحة الرئيسية</a>
-                            </li>
+                            <li><a href="{{ url('/') }}">الصفحة الرئيسية</a></li>
 
                         </ul>
                     </div>
@@ -152,21 +146,17 @@
                         <ul class="navigation clearfix">
                             <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
+                            <li><a href="{{ url('/team') }}">فريقنا</a></li>
+
                             <li><a href="{{ url('/investments') }}">الإستثمار العقارى</a></li>
 
-                            <li><a href="{{url('/latests')}}">أخبارنا</a>
+                            <li><a href="{{url('/latests')}}">أخبارنا</a></li>
 
-                            </li>
+                            <li class="current"><a href="{{ url('/projects')}}">المشاريع</a></li>
 
-                            <li class="current"><a href="{{ url('/projects') }}">المشاريع</a>
+                            <li><a href="{{url('/about')}}">من نحن</a></li>
 
-                            </li>
-
-                            <li><a href="{{url('/about')}}">من نحن</a>
-                            </li>
-
-                            <li><a href="{{ url('/') }}">الصفحة الرئيسية</a>
-                            </li>
+                            <li><a href="{{ url('/') }}">الصفحة الرئيسية</a></li>
 
                         </ul>
                     </div>

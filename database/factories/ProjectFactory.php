@@ -21,9 +21,9 @@ class ProjectFactory extends Factory
         $i++;
         return [
             //
-            "title" => $this->faker->word(),
-            "client" => $this->faker->company,
-            "location" => $this->faker->address,
+            "title" => $this->faker->catchPhrase(),
+            "client" => $this->faker->company(),
+            "location" => $this->faker->address(),
             "surface_area" => $this->faker->numberBetween(2000 , 10000),
             "year" => $this->faker->year('now'),
             "desc" => $this->faker->sentence(300),

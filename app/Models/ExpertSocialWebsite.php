@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Expert extends Model
+class ExpertSocialWebsite extends Model
 {
     use HasFactory;
     protected $guarded = [
         "id","created_at","updated_at"
     ];
 
-    public function socialMedia()
+    public function Expert()
     {
-        return $this->hasMany(ExpertSocialWebsite::class);
+        return $this->belongsTo(Expert::class);
     }
 }

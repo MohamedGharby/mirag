@@ -18,7 +18,7 @@ class LatestFactory extends Factory
         return [
             //
 
-            "title" => $this->faker->sentence(25),
+            "title" => $this->faker->catchPhrase(),
             "desc" => $this->faker->sentence(200),
             "main_img" => "latests/$i.png",
         ];

@@ -93,6 +93,8 @@
                             <ul class="navigation clearfix">
                                 <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
+                                <li><a href="{{ url('/team') }}">فريقنا</a></li>
+
                                 <li class="current"><a href="{{ url('investments') }}">الإستثمار العقارى</a></li>
 
                                 <li><a href="{{url('/latests')}}">أخبارنا</a></li>
@@ -136,6 +138,9 @@
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                             <ul class="navigation clearfix">
                                 <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
+
+                                <li><a href="{{ url('/team') }}">فريقنا</a></li>
+                                
                                 <li class="current"><a href="{{ url('investments') }}">الإستثمار العقارى</a></li>
 
                                 <li><a href="{{url('/latests')}}">أخبارنا</a></li>

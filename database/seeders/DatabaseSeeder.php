@@ -23,8 +23,9 @@ class DatabaseSeeder extends Seeder
             Projectseeder::class,
             Latestseeder::class,
             Commentseeder::class,
-            Expertseeder::class,
             CompanySeeder::class,
+            Expertseeder::class,
+            ExpertSocialWebsiteSeeder::class,
         ] );
     }
 }

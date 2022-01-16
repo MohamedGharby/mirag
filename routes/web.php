@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\web\AboutController;
 use App\Http\Controllers\web\ContactController;
+use App\Http\Controllers\web\ExpertController;
 use App\Http\Controllers\web\HomeController;
 use App\Http\Controllers\web\InvestmentController;
 use App\Http\Controllers\web\LatestController as WebLatestController;
@@ -32,5 +33,6 @@ Route::get('/projects/{projectId}' , [ProjectsController::class , 'show']);
 Route::get('/latests', [WebLatestController::class , 'index']);
 Route::get('/latests/{latestId}', [WebLatestController::class , 'show']);
 Route::get('/investments', [InvestmentController::class , 'index']);
+Route::get('/team', [ExpertController::class , 'index']);
 
 

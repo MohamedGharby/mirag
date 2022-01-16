@@ -20,7 +20,7 @@ class ExpertFactory extends Factory
         return [
             //
             "name" => $this->faker->name("male"),
-            "title" => $this->faker->sentence(10),
+            "title" => $this->faker->jobTitle(),
             "img" => "experts/$i.png"
         ];
     }

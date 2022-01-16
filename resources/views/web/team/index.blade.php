@@ -1,6 +1,6 @@
 @extends('web.layout')
 @section('title')
-    أخبارنا
+    فريقنا
 @endsection
 
 @section('header')
@@ -21,7 +21,7 @@
     
                         <!--Top Right-->
                         <div class="top-right pull-right">
-                            <div class="text">ميراج للمقاولات والإستثمارات العقارية</div>
+                            <div class="text">Welcome to Emarat Construction Template</div>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     <div class="clearfix">
     
                         <div class="pull-left logo-box">
-                            <div class="logo"><a href="{{ url("/") }}"><img src="{{ asset("web/images/logo.png") }}" alt="" title=""></a></div>
+                            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
                         </div>
     
                         <div class="pull-right upper-right clearfix">
@@ -93,11 +93,11 @@
                                 <ul class="navigation clearfix">
                                     <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
-                                    <li><a href="{{ url('/team') }}">فريقنا</a></li>
+                                    <li class="current"><a href="{{ url('/team') }}">فريقنا</a></li>
 
-                                    <li><a href="{{ url('/investments') }}">الإستثمار العقارى</a></li>
+                                    <li><a href="{{url('/investments')}}">الإستثمار العقارى</a></li>
     
-                                    <li class="current"><a href="{{url('/latests')}}">أخبارنا</a></li>
+                                    <li><a href="{{url('/latests')}}">أخبارنا</a></li>
     
                                     <li><a href="{{url('/projects')}}">المشاريع</a></li>
     
@@ -112,7 +112,28 @@
     
                         <div class="outer-box clearfix">
     
-                        
+                            <!--Search Box-->
+                            <div class="search-box-outer">
+                                <div class="dropdown">
+                                    <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                                    <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                        <li class="panel-outer">
+                                            <div class="form-container">
+                                                <form method="post" action="blog.html">
+                                                    <div class="form-group">
+                                                        <input type="search" name="field-name" value="" placeholder="Search Here" required>
+                                                        <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <div class="advisor-box">
+                                <a href="index.html" class="theme-btn advisor-btn">Get A Quote</a>
+                            </div>
     
                         </div>
                     </div>
@@ -125,7 +146,7 @@
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="{{ url('/') }}" class="img-responsive"><img src="{{ asset("web/images/logo-small.png") }}" alt="" title=""></a>
+                        <a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
                     </div>
     
                     <!--Right Col-->
@@ -144,11 +165,11 @@
                                 <ul class="navigation clearfix">
                                     <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
 
-                                    <li><a href="{{ url('/team') }}">فريقنا</a></li>
+                                    <li class="current"><a href="{{ url('/team') }}">فريقنا</a></li>
 
-                                    <li><a href="{{ url('/investments') }}">الإستثمار العقارى</a></li>
+                                    <li><a href="{{url('/investments')}}">الإستثمار العقارى</a></li>
     
-                                    <li class="current"><a href="{{url('/latests')}}">أخبارنا</a></li>
+                                    <li><a href="{{url('/latests')}}">أخبارنا</a></li>
     
                                     <li><a href="{{url('/projects')}}">المشاريع</a></li>
     
@@ -169,94 +190,60 @@
         <!--End Main Header -->
 @endsection
 
-
 @section('main')
     	<!--Page Title-->
-        <section class="page-title" style="background-image:url(web/images/background/14.jpg)">
+        <section class="page-title" style="background-image:url(web/images/background/13.jpg)">
             <div class="auto-container">
-                <h1>{{ $latest->name }}</h1>
+                <h1>فريقنا</h1>
                 <ul class="page-breadcrumb">
-                    <li><a href="{{ url('/') }}">الرئيسية</a></li>
-                    <li>أخبارنا</li>
+                    <li><a href="{{ url("/") }}">الرئيسية</a></li>
+                    <li>فريقنا</li>
                 </ul>
             </div>
         </section>
         <!--End Page Title-->
 
-    <!--Sidebar Page Container-->
-    <div class="sidebar-page-container">
+            <!--Team Section-->
+    <section class="team-section">
     	<div class="auto-container">
-        	<div class="row clearfix">
 
-                <!--Content Side-->
-                <div class="content-side col-lg-8 col-md-12 col-sm-12">
-                	<div class="blog-single">
-						<div class="inner-box">
-                            <div class="image">
-                                <img src="{{ asset("web/images/resource/news-15.jpg") }}" alt="" />
-                                <div class="post-date"><span>{{ $latest->created_at->format('d') }}</span> {{ $latest->created_at->format('M') }}</div>
-                            </div>
-                            <div class="title-box">
-                            	<h2>{{ Str::limit($latest->title , 50 , '.') }}</h2>
-                            </div>
-                            <div class="lower-content">
-                            	<div class="text">
-                                	<p>{{ $latest->desc }}</p>
-                                    <p>That is the way we all be came the Brady Bunch these to days are all Happy and Free these days you wanna be where everybody knows your name fish do not fry in the artist kitchen and beans do not burn on the grill took a whole lotta trying just to get up that hill.</p>
-                                    <div class="two-column">
-                                        <div class="row clearfix">
-                                            <div class="column col-lg-6 col-md-6 col-sm-12">
-                                                <div class="image">
-                                                    <img src="{{ asset("web/images/resource/news-16.jpg") }}" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="column col-lg-6 col-md-6 col-sm-12">
-                                                <p>That is the way we all be came the Brady Bunch these to days are all Happy and Free these days you wanna be where everybody knows your name fish do not fry in the artist kitchen and beans do not burn on the grill the way we all be came the Brady Bunch these to days took a whole lotta trying just to get up that hill.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>{{ $latest->desc }}</p>
-                                </div>
+        	<!--Sec Title-->
+        	<div class="sec-title centered">
+            	<div class="title">فريقنا</div>
+                <h2>أفضل خبرائنا</h2>
+                <div class="seperater"></div>
+            </div>
 
-
-                            </div>
+            <div class="row clearfix">
+                @foreach ($experts as $expert)
+                    
+                <!--Team Block-->
+                <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                	<div class="inner-box">
+                        @foreach ($expert->socialMedia as $social)
+                            
+                    	<ul class="social-icon-one">
+                        	<li><a href="{{ $social->facebook }}"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="{{ $social->twitter }}"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="{{ $social->instagram }}"><span class="fa fa-instagram"></span></a></li>
+                            <li><a href="{{ $social->linkedin }}"><span class="fa fa-linkedin"></span></a></li>
+                        </ul>
+                        @endforeach
+                    	<div class="image">
+                        	<img src="{{ asset("web/images/resource/team-1.png") }}" alt="" />
                         </div>
-
-
-
+                        <div class="lower-box">
+                        	<h3>{{ $expert->name }}</h3>
+                            <div class="designation">{{ $expert->title }}</div>
+                        </div>
                     </div>
                 </div>
+                @endforeach
 
-                <!--Sidebar Side-->
-                <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
-                	<aside class="sidebar">
-
-                        
-                        
-
-                        <!-- Popular Posts -->
-                        <div class="sidebar-widget popular-posts">
-                        	<div class="sidebar-title">
-                            	<h2>أخبارنا</h2>
-                            </div>
-                            <div class="widget-content">
-                                @foreach ($news as $new)
-                                    
-                                    <article class="post">
-                                        <figure class="post-thumb"><a href="{{ url("latests/$new->id") }}"><img src="{{ asset("web/images/resource/post-thumb-1.jpg") }}" alt=""></a></figure>
-                                        <div class="text"><a href="{{ url("latests/$new->id") }}">{{ Str::limit($new->title , 50 , '.') }}</a></div>
-                                        <div class="post-info">{{ $new->created_at->format('d M, Y') }}</div>
-                                    </article>
-                                @endforeach
-
-							</div>
-                        </div>
-
-					</aside>
-                </div>
 
             </div>
+
         </div>
-    </div>
-      
+    </section>
+    <!--End Team Section-->
 @endsection

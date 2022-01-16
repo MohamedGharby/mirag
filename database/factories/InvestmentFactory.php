@@ -16,8 +16,8 @@ class InvestmentFactory extends Factory
     public function definition()
     {
         return [
-            "project_name" => $this->faker->sentence(4),
-            "desc" => $this->faker->sentence(40),
+            "project_name" => $this->faker->bs(),
+            "desc" => $this->faker->sentence(25),
         ];
     }
 }

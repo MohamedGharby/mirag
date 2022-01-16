@@ -18,7 +18,7 @@ class CommentFactory extends Factory
         return [
             //
             "name" => $this->faker->name('male'),
-            "email" => $this->faker->email,
+            "email" => $this->faker->email(),
             "body" => $this->faker->sentence(15),
         ];
     }
