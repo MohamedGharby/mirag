@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\admin\AdminHomeController;
+use App\Http\Controllers\admin\SuperAdminController;
 use App\Http\Controllers\web\AboutController;
 use App\Http\Controllers\web\ContactController;
 use App\Http\Controllers\web\ExpertController;
@@ -35,4 +37,8 @@ Route::get('/latests/{latestId}', [WebLatestController::class , 'show']);
 Route::get('/investments', [InvestmentController::class , 'index']);
 Route::get('/team', [ExpertController::class , 'index']);
 
+Route::prefix("dashboard")->middleware(['auth'])->group(function(){
+    Route::get("/" , [AdminHomeController::class , 'index']);
+    Route::get("/super-admin" , [SuperAdminController::class , 'index']);
 
+});
