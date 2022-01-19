@@ -9,17 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminUserController extends Controller
 {
-    //
-
-    public function delete($userId){
-        $user = User::findOrFail($userId);
-
-        $user->delete();
-
-        return back();
-    }
-
-
     public function store(Request $request){
         $request->validate([
             "name"=>"required|string|max:255",
@@ -35,6 +24,8 @@ class AdminUserController extends Controller
             "password"=>$hashedPass,
             "role_id"=> 2,
         ]);
+
+        $request->session()->flash("message" , "Admin added successfully");
 
         return back();
     }
@@ -53,7 +44,22 @@ class AdminUserController extends Controller
             "password"=>Hash::make($request->password),
         ]);
 
+        $request->session()->flash("message" , "Admin updated successfully");
+
+
         return back();
 
+    }
+
+
+    public function delete($userId , Request $request){
+        $user = User::findOrFail($userId);
+
+        $user->delete();
+
+        $request->session()->flash("message" , "Admin deleted successfully");
+
+
+        return back();
     }
 }

@@ -12,6 +12,7 @@
     </div>
   </div>
 </div>
+@include('admin.inc.message')
 <table class="table">
   <thead>
     <tr>

@@ -46,6 +46,7 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::post("/user/add" ,[AdminUserController::class , "store"]);
     Route::post("/user/edit" ,[AdminUserController::class , "update"]);
     Route::get("/messages" , [AdminMessagesController::class , "index"]);
+    Route::get("/messages/{msgId}" , [AdminMessagesController::class , "show"]);
     Route::get("/messages/delete/{msgId}" , [AdminMessagesController::class ,"delete"]);
 
 });

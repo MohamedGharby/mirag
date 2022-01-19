@@ -18,11 +18,22 @@ class AdminMessagesController extends Controller
         return view("admin.messages.index")->with($data);
     }
 
+    public function show($msgId)
+    {
+        $superRoleName = Role::where("name" , "superadmin")->first();
+        $data['role_id'] =  $superRoleName->id;
+        $data['user'] = Auth::user();
+        $data["message"] = Contact::findOrFail($msgId);
+        return view("admin.messages.show")->with($data);
+    }
 
-    public function delete($msgId){
+
+    public function delete($msgId , Request $request){
         $message = Contact::findOrFail($msgId);
 
         $message->delete();
+
+        $request->session()->flash("message" , "Message deleted successfully");
 
         return back();
     }
