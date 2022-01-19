@@ -61,6 +61,7 @@
         </button>
       </div>
       <div class="modal-body">
+        @include('admin.inc.errors')
         <form method="POST" action="{{url('dashboard/user/add')}}" class="form-horizontal">
           @csrf
           <div class="card-body">
@@ -107,6 +108,7 @@
         </button>
       </div>
       <div class="modal-body">
+        @include('admin.inc.errors')
         <form method="POST" action="{{url('dashboard/user/edit')}}" class="form-horizontal">
           @csrf
           <div class="card-body">

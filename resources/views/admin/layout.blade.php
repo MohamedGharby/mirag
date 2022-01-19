@@ -78,11 +78,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Sample Pages
+                 Pages
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('dashboard/projects')  }}" class="nav-link">
+                  <i class="fas fa-hard-hat"></i>
+                  <p>
+                    Projects
+                  </p>
+                </a>
+              </li>
               
           <li class="nav-item">
             <a href="{{ url('dashboard/messages')  }}" class="nav-link">
@@ -92,6 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

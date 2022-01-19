@@ -3,6 +3,8 @@
 use App\Http\Controllers\admin\AdminHomeController;
 use App\Http\Controllers\admin\AdminMessagesController;
 use App\Http\Controllers\admin\AdminUserController;
+use App\Http\Controllers\admin\ProjectController;
+use App\Http\Controllers\admin\ProjectImagesController;
 use App\Http\Controllers\admin\SuperAdminController;
 use App\Http\Controllers\web\AboutController;
 use App\Http\Controllers\web\ContactController;
@@ -48,5 +50,14 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::get("/messages" , [AdminMessagesController::class , "index"]);
     Route::get("/messages/{msgId}" , [AdminMessagesController::class , "show"]);
     Route::get("/messages/delete/{msgId}" , [AdminMessagesController::class ,"delete"]);
-
+    Route::get("/projects" , [ProjectController::class , "index"]);
+    Route::post("/projects" , [ProjectController::class , "store"]);
+    Route::get("/projects/create" , [ProjectController::class , "create"]);
+    Route::get("/projects/delete/{project}" , [ProjectController::class , "delete"]);
+    Route::get("/projects/edit/{project}" , [ProjectController::class , "edit"]);
+    Route::get("/projects/toggle/{project}" , [ProjectController::class , "bestToggle"]);
+    Route::put("/projects/{project}" , [ProjectController::class , "update"]);
+    Route::get("/project/images/{projectId}" , [ProjectImagesController::class , "show"]);
+    Route::post("/project/images" , [ProjectImagesController::class , "store"]);
+    Route::delete("/images/{image}" , [ProjectImagesController::class , "delete"]);
 });
