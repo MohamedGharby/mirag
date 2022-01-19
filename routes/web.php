@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\admin\AdminHomeController;
+use App\Http\Controllers\admin\AdminMessagesController;
+use App\Http\Controllers\admin\AdminUserController;
 use App\Http\Controllers\admin\SuperAdminController;
 use App\Http\Controllers\web\AboutController;
 use App\Http\Controllers\web\ContactController;
@@ -40,5 +42,10 @@ Route::get('/team', [ExpertController::class , 'index']);
 Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::get("/" , [AdminHomeController::class , 'index']);
     Route::get("/super-admin" , [SuperAdminController::class , 'index']);
+    Route::get("/user/delete/{userId}" , [AdminUserController::class , 'delete']);
+    Route::post("/user/add" ,[AdminUserController::class , "store"]);
+    Route::post("/user/edit" ,[AdminUserController::class , "update"]);
+    Route::get("/messages" , [AdminMessagesController::class , "index"]);
+    Route::get("/messages/delete/{msgId}" , [AdminMessagesController::class ,"delete"]);
 
 });

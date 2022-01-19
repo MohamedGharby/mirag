@@ -13,8 +13,8 @@ class SuperAdminController extends Controller
     public function index()
     {
         $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['roles'] = Role::select("name" , "id")->get();
         $data['role_id'] =  $superRoleName->id;
+        $data['roles'] = Role::select("name" , "id")->get();
         $data['user'] = Auth::user();
         $data['users'] = User::select('id' , 'name' ,'email','role_id')->get();
         return view("admin.users.index")->with($data);

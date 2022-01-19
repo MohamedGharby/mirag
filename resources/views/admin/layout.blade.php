@@ -83,25 +83,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Page one</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Page two</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+              
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{ url('dashboard/messages')  }}" class="nav-link">
+            <i class="fas fa-envelope"></i>
               <p>
-                Page three
+                Messages
               </p>
             </a>
           </li>
