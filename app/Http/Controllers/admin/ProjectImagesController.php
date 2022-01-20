@@ -38,10 +38,11 @@ class ProjectImagesController extends Controller
         return back();
     }
 
-    public function delete(ProjectImg $image , Request $request)
+    public function delete($projectImgsId , Request $request)
     {
-        Storage::delete($image->name);
-        $image->delete();
+        $prImg = ProjectImg::findOrFail($projectImgsId);
+        $prImg->delete();
+        Storage::delete($prImg->name);
         $request->session()->flash("message" , "Image deleted successfully");
         return back();
     }

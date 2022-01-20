@@ -59,5 +59,5 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::put("/projects/{project}" , [ProjectController::class , "update"]);
     Route::get("/project/images/{projectId}" , [ProjectImagesController::class , "show"]);
     Route::post("/project/images" , [ProjectImagesController::class , "store"]);
-    Route::delete("/images/{image}" , [ProjectImagesController::class , "delete"]);
+    Route::get("/images/{image}" , [ProjectImagesController::class , "delete"]);
 });
