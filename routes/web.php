@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\AdminHomeController;
+use App\Http\Controllers\admin\AdminLatestController;
 use App\Http\Controllers\admin\AdminMessagesController;
 use App\Http\Controllers\admin\AdminUserController;
 use App\Http\Controllers\admin\ProjectController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\web\HomeController;
 use App\Http\Controllers\web\InvestmentController;
 use App\Http\Controllers\web\LatestController as WebLatestController;
 use App\Http\Controllers\web\ProjectsController;
+use App\Models\Latest;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,5 +61,10 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::put("/projects/{project}" , [ProjectController::class , "update"]);
     Route::get("/project/images/{projectId}" , [ProjectImagesController::class , "show"]);
     Route::post("/project/images" , [ProjectImagesController::class , "store"]);
-    Route::get("/images/{image}" , [ProjectImagesController::class , "delete"]);
+    Route::delete("/images/{image}" , [ProjectImagesController::class , "delete"]);
+    Route::get("/news" , [AdminLatestController::class , "index"]);
+    Route::get("/news/delete/{latest}", [AdminLatestController::class , "delete"]);
+    Route::post("/news/add" , [AdminLatestController::class , "store"]);
+    Route::get("news/edit/{latest}" , [AdminLatestController::class , "edit"]);
+    Route::put("news/edit/{latest}" , [AdminLatestController::class , "update"]);
 });

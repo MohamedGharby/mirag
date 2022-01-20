@@ -29,10 +29,7 @@
     <div class="row p-3">
 
         @foreach ($imgs as $img)
-        {{-- <form  id="delete_form" action="{{ url("dashboard/images/$img->id") }}" method="POST">
-            @csrf
-            @method('DELETE')
-        </form> --}}
+
             @php
                 $img->name = str_replace('public/', 'storage/', $img->name);
             @endphp
@@ -40,7 +37,11 @@
                 <div class="card" style="width: 18rem;">
                     <img style="height: 300px" src="{{ asset("$img->name") }}" class="card-img-top">
                     <div class="card-body d-flex align-items-center justify-content-center">
-                        <a href="{{ url("dashboard/images/$img->id") }}" type="submit" class="btn btn-danger px-3 mx-2">Delete</a>
+                        <form  id="delete_form" action="{{url("dashboard/images/$img->id")}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button  type="submit" class="btn btn-danger px-3 mx-2 form">Delete</button>
+                        </form>
                         <a href="#" class="btn btn-primary px-3 mx-2">Make main</a>
                     </div>
                 </div>
@@ -59,9 +60,7 @@
             $("#imgName").text(fileName)
         })
     </script>
-    <script>
-        //$("#form-btn").click(function() {
-        //    $("#delete_form").submit();
-      //  })
+    <script >
+
     </script>
 @endsection

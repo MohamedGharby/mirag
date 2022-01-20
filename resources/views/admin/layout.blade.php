@@ -91,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </p>
                 </a>
               </li>
-              
+
           <li class="nav-item">
             <a href="{{ url('dashboard/messages')  }}" class="nav-link">
             <i class="fas fa-envelope"></i>
@@ -100,6 +100,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="{{ url('dashboard/news')  }}" class="nav-link">
+              <i class="fas fa-newspaper"></i>
+              <p>
+                News
+              </p>
+            </a>
+          </li>
+
 
         </ul>
       </nav>

@@ -50,7 +50,7 @@ class ProjectController extends Controller
         }
 
         $data['best'] = $best;
-        
+
         $path = Storage::putFile("public/projects" , $data['img']);
         $data['img']= $path;
 
@@ -70,7 +70,7 @@ class ProjectController extends Controller
         return view('admin.projects.edit')->with($data);
     }
 
- 
+
 
     public function update(Request $request , Project $project)
     {
@@ -86,11 +86,11 @@ class ProjectController extends Controller
 
         if ($request->hasFile('img')) {
             Storage::delete($project->img);
-            
+
             $path = Storage::putFile("public/projects" , $data['img']);
             $data['img']= $path;
         }
-        
+
 
         $project->update($data);
 
@@ -101,7 +101,7 @@ class ProjectController extends Controller
     public function bestToggle(Project $project)
     {
         $project->update([
-            'best' => ! $project->best 
+            'best' => ! $project->best
         ]);
         return back();
     }
@@ -117,4 +117,6 @@ class ProjectController extends Controller
         };
         return back();
     }
+
+    
 }
