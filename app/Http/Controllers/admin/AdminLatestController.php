@@ -21,6 +21,14 @@ class AdminLatestController extends Controller
         return view("admin.latest.index")->with($data);
     }
 
+    public function create(Request $request){
+        $superRoleName = Role::where("name" , "superadmin")->first();
+        $data['role_id'] =  $superRoleName->id;
+        $data['user'] = Auth::user();
+        
+        return view("admin.latest.create")->with($data);
+    }
+
     public function delete(Request $request , Latest $latest)
     {
         try {

@@ -4,6 +4,7 @@
 @section('main')
 
 @include('admin.inc.errors')
+<div class="card">
 <form method="post" action="{{ url("dashboard/news/edit/$latests->id") }}" class="form-horizontal" enctype="multipart/form-data">
     @csrf
     @method('PUT')
@@ -38,6 +39,7 @@
         </div>
     </div>
 </form>
+</div>
 
 @endsection
 @section('scripts')

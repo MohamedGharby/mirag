@@ -49,7 +49,9 @@
 
 </table>
 
-
+<div class="d-flex justify-content-center">
+    {{ $users->links() }}
+</div>
 
 <div class="modal fade show" id="modal-xl" style="display: none; padding-right: 16px;" aria-modal="true">
   <div class="modal-dialog modal-xl">

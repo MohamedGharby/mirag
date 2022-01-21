@@ -16,7 +16,7 @@ class SuperAdminController extends Controller
         $data['role_id'] =  $superRoleName->id;
         $data['roles'] = Role::select("name" , "id")->get();
         $data['user'] = Auth::user();
-        $data['users'] = User::select('id' , 'name' ,'email','role_id')->get();
+        $data['users'] = User::select('id' , 'name' ,'email','role_id')->paginate(10);
         return view("admin.users.index")->with($data);
     }
 }

@@ -63,6 +63,7 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::post("/project/images" , [ProjectImagesController::class , "store"]);
     Route::delete("/images/{image}" , [ProjectImagesController::class , "delete"]);
     Route::get("/news" , [AdminLatestController::class , "index"]);
+    Route::get("/news/create" ,[AdminLatestController::class , "create"]);
     Route::get("/news/delete/{latest}", [AdminLatestController::class , "delete"]);
     Route::post("/news/add" , [AdminLatestController::class , "store"]);
     Route::get("news/edit/{latest}" , [AdminLatestController::class , "edit"]);
