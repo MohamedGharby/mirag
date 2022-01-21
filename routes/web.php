@@ -46,13 +46,18 @@ Route::get('/team', [ExpertController::class , 'index']);
 
 Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::get("/" , [AdminHomeController::class , 'index']);
+    //users routes
     Route::get("/super-admin" , [SuperAdminController::class , 'index']);
     Route::get("/user/delete/{userId}" , [AdminUserController::class , 'delete']);
     Route::post("/user/add" ,[AdminUserController::class , "store"]);
     Route::post("/user/edit" ,[AdminUserController::class , "update"]);
+    //end users routes
+    //  messeges routes
     Route::get("/messages" , [AdminMessagesController::class , "index"]);
     Route::get("/messages/{msgId}" , [AdminMessagesController::class , "show"]);
     Route::get("/messages/delete/{msgId}" , [AdminMessagesController::class ,"delete"]);
+    //end messages routes
+    //projects routes
     Route::get("/projects" , [ProjectController::class , "index"]);
     Route::post("/projects" , [ProjectController::class , "store"]);
     Route::get("/projects/create" , [ProjectController::class , "create"]);
@@ -60,16 +65,23 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::get("/projects/edit/{project}" , [ProjectController::class , "edit"]);
     Route::get("/projects/toggle/{project}" , [ProjectController::class , "bestToggle"]);
     Route::put("/projects/{project}" , [ProjectController::class , "update"]);
+    //end projects routes
+    //project images routes
     Route::get("/project/images/{projectId}" , [ProjectImagesController::class , "show"]);
     Route::post("/project/images" , [ProjectImagesController::class , "store"]);
     Route::delete("/images/{image}" , [ProjectImagesController::class , "delete"]);
+    //end project images routes
+    // news routes
     Route::get("/news" , [AdminLatestController::class , "index"]);
     Route::get("/news/create" ,[AdminLatestController::class , "create"]);
     Route::get("/news/delete/{latest}", [AdminLatestController::class , "delete"]);
     Route::post("/news/add" , [AdminLatestController::class , "store"]);
     Route::get("news/edit/{latest}" , [AdminLatestController::class , "edit"]);
     Route::put("news/edit/{latest}" , [AdminLatestController::class , "update"]);
+    //end news routes
+    //news images routes
     Route::get("news/images/{latestId}" , [AdminLatestImagesController::class , "show"] );
     Route::post("/news/images" , [AdminLatestImagesController::class , "store"]);
     Route::delete("/news/images/{imgId}", [AdminLatestImagesController::class , "delete"]);
+    //end news images routes
 });

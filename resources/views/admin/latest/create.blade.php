@@ -14,6 +14,7 @@
         <form method="POST" action="{{ url('dashboard/news/add') }}" class="form-horizontal" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
+                <div class="container">
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label">Title</label>
                     <div class="col-sm-10">
@@ -23,7 +24,7 @@
                 <div class="form-group row">
                     <label for="desc" class="col-sm-2 col-form-label">description</label>
                     <div class="col-sm-10">
-                        <textarea name="desc" id="desc" cols="100" rows="10" placeholder="Enter news details"></textarea>
+                        <textarea name="desc" id="desc" cols="132" rows="10" placeholder="Enter news details"></textarea>
                     </div>
                 </div>
                 <div class="form-group">
@@ -40,6 +41,7 @@
                 <div class="modal-footer justify-content-between">
                     <button type="submit" class="btn btn-primary">Add</button>
                 </div>
+            </div>
             </div>
         </form>
     </div>
