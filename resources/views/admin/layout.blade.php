@@ -111,6 +111,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
 
 
+          <li class="nav-item">
+            <a href="{{ url('dashboard/companies')  }}" class="nav-link">
+                <i class="fas fa-building"></i>
+              <p>
+                Companies
+              </p>
+            </a>
+          </li>
+
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

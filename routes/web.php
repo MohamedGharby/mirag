@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\AdminCompanyController;
 use App\Http\Controllers\admin\AdminHomeController;
 use App\Http\Controllers\admin\AdminLatestController;
 use App\Http\Controllers\admin\AdminLatestImagesController;
@@ -84,4 +85,10 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::post("/news/images" , [AdminLatestImagesController::class , "store"]);
     Route::delete("/news/images/{imgId}", [AdminLatestImagesController::class , "delete"]);
     //end news images routes
+    //companies routes
+    Route::get("/companies", [AdminCompanyController::class , "index"]);
+    Route::post("/companies/add" , [AdminCompanyController::class , "store"]);
+    Route::post("/companies/edit", [AdminCompanyController::class , "update"]);
+    Route::get("/companies/delete/{company}", [AdminCompanyController::class , "delete"]);
+    //end companies Routes
 });
