@@ -33,7 +33,7 @@
       <td>
         <button type="button" class="btn btn-primary edit-btn" data-desc="{{$invest->desc}}" data-id="{{$invest->id}}" data-name="{{$invest->project_name}}"  data-toggle="modal" data-target="#modal-xl-edit"><i class="fas fa-user-edit"></i></button>
         <a class="btn btn-danger" href="{{ url("dashboard/investments/delete/$invest->id")}}"> <i class="fas fa-trash"></i></a>
-        <a href="" class="btn btn-success"><i class="fas fa-images"></i></a>
+        <a href="{{ url("dashboard/inves/images/$invest->id")}}" class="btn btn-success"><i class="fas fa-images"></i></a>
       </td>
 
     </tr>
