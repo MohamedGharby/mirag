@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminCompanyController;
 use App\Http\Controllers\admin\AdminHomeController;
+use App\Http\Controllers\admin\AdminInvestmentsController;
 use App\Http\Controllers\admin\AdminLatestController;
 use App\Http\Controllers\admin\AdminLatestImagesController;
 use App\Http\Controllers\admin\AdminMessagesController;
@@ -91,4 +92,12 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::post("/companies/edit", [AdminCompanyController::class , "update"]);
     Route::get("/companies/delete/{company}", [AdminCompanyController::class , "delete"]);
     //end companies Routes
+    //investments Routes
+    Route::get("/investments/{companyId}" , [AdminInvestmentsController::class , "index"]);
+    Route::post("/investments/add" , [AdminInvestmentsController::class , "store"]);
+    Route::put("/investments/edit" , [AdminInvestmentsController::class , "update"]);
+    Route::get("/investments/delete/{investment}" , [AdminInvestmentsController::class , "delete"]);
+    //end investments routes
+
+    
 });

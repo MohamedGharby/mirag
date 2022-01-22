@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Helper\Helper;
 use App\Models\Role;
 use App\Models\Project;
 use App\Models\ProjectImg;
@@ -29,8 +30,8 @@ class ProjectImagesController extends Controller
             'project_id' => 'required|exists:projects,id'
         ]);
 
-
-        $path = Storage::putFile("public/projects" , $data['name']);
+        $path = Helper::uploadImage("public/projects" , $data["img"]);
+        //$path = Storage::putFile("public/projects" , $data['name']);
         $data['name']= $path;
         ProjectImg::create($data);
 

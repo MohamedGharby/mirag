@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Helper\Helper;
 use App\Models\Role;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -51,7 +52,8 @@ class ProjectController extends Controller
 
         $data['best'] = $best;
 
-        $path = Storage::putFile("public/projects" , $data['img']);
+        $path = Helper::uploadImage("public/projects" , $data["img"]);
+       // $path = Storage::putFile("public/projects" , $data['img']);
         $data['img']= $path;
 
         Project::create($data);
@@ -86,8 +88,8 @@ class ProjectController extends Controller
 
         if ($request->hasFile('img')) {
             Storage::delete($project->img);
-
-            $path = Storage::putFile("public/projects" , $data['img']);
+            $path =Helper::uploadImage("public/projects" , $data["img"]);
+            //$path = Storage::putFile("public/projects" , $data['img']);
             $data['img']= $path;
         }
 
@@ -118,5 +120,5 @@ class ProjectController extends Controller
         return back();
     }
 
-    
+
 }

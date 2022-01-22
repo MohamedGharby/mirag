@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Helper\Helper;
 use App\Models\Role;
 use App\Models\Latest;
 use App\Models\LatestImg;
@@ -29,8 +30,8 @@ class AdminLatestImagesController extends Controller
             'latest_id' => 'required|exists:latests,id'
         ]);
 
-
-        $path = Storage::putFile("public/latests" , $data['name']);
+        $path = Helper::uploadImage("public/latests" , $data["name"]);
+       // $path = Storage::putFile("public/latests" , $data['name']);
         $data['name']= $path;
         LatestImg::create($data);
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Helper\Helper;
 use Exception;
 use App\Models\Role;
 use App\Models\Latest;
@@ -25,7 +26,7 @@ class AdminLatestController extends Controller
         $superRoleName = Role::where("name" , "superadmin")->first();
         $data['role_id'] =  $superRoleName->id;
         $data['user'] = Auth::user();
-        
+
         return view("admin.latest.create")->with($data);
     }
 
@@ -49,8 +50,8 @@ class AdminLatestController extends Controller
             'main_img' => 'required|image|mimes:jpg,png,jpeg',
         ]);
 
-
-        $path = Storage::putFile("public/latests" , $data['main_img']);
+        $path = Helper::uploadImage("public/latests" , $data["main_img"]);
+       // $path = Storage::putFile("public/latests" , $data['main_img']);
         $data['main_img']= $path;
 
         Latest::create($data);
@@ -77,8 +78,8 @@ class AdminLatestController extends Controller
 
         if ($request->hasFile('main_img')) {
             Storage::delete($latest->img);
-
-            $path = Storage::putFile("public/latests" , $data['main_img']);
+             $path = Helper::uploadImage("public/latests" , $data["main_img"]);
+            //$path = Storage::putFile("public/latests" , $data['main_img']);
             $data['main_img'] = $path;
         }
 
