@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\AdminCompanyController;
+use App\Http\Controllers\admin\AdminExpertController;
 use App\Http\Controllers\admin\AdminHomeController;
 use App\Http\Controllers\admin\AdminInvestmentImgsController;
 use App\Http\Controllers\admin\AdminInvestmentsController;
@@ -99,9 +100,12 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::put("/investments/edit" , [AdminInvestmentsController::class , "update"]);
     Route::get("/investments/delete/{investment}" , [AdminInvestmentsController::class , "delete"]);
     //end investments routes
+    //investments imgs routes
     Route::get("/inves/images/{investid}" , [AdminInvestmentImgsController::class , "show"]);
     Route::post("/invest/images" , [AdminInvestmentImgsController::class , "store"]);
     Route::delete("/invest/images/{imgId}" , [AdminInvestmentImgsController::class , "delete"]);
+    //end investments imgs routes
+    Route::get("/experts" , [AdminExpertController::class , "index"]);
 
 
 });

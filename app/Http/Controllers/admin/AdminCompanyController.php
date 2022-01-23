@@ -13,9 +13,7 @@ class AdminCompanyController extends Controller
 {
     public function index()
     {
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
+       
         $data["companies"] = Company::select("id" , "name")->paginate(5);
         return view("admin.companies.index")->with($data);
     }

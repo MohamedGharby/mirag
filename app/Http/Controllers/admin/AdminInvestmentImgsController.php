@@ -15,9 +15,7 @@ class AdminInvestmentImgsController extends Controller
 {
     public function show($investId)
     {
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
+      
         $data['imgs'] = InvestmentImg::where('investment_id' , $investId)->paginate(9);
         $data['invest']= Investment::select("project_name" , "id")->where('id' , $investId)->first();
         return view("admin.investment-imgs.show")->with($data);

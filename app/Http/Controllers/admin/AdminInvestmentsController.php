@@ -14,9 +14,7 @@ class AdminInvestmentsController extends Controller
 {
     public function index($companyId)
     {
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
+        
         $data["invests"] = Investment::select("id" , "project_name" , "desc")->where("company_id" , $companyId)->paginate(5);
         $data["company"] = Company::select("id" , "name")->where("id" , $companyId)->first();
         return view("admin.investments.index")->with($data);

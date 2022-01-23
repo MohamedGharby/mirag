@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Storage;
 class ProjectController extends Controller
 {
     public function index(Request $request){
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
+
         if ($request->search) {
            $data['projects'] = Project::where("title" , "like" , "%". $request->search .'%')->paginate(10);
            return view("admin.projects.index")->with($data);
@@ -28,10 +26,8 @@ class ProjectController extends Controller
 
     public function create()
     {
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
-        return view('admin.projects.create')->with($data);
+
+        return view('admin.projects.create');
     }
 
     public function store(Request $request)
@@ -72,9 +68,7 @@ class ProjectController extends Controller
 
     public function edit(Project $project)
     {
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
+      
         $data['project'] = $project;
         return view('admin.projects.edit')->with($data);
     }

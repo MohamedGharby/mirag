@@ -15,19 +15,15 @@ class AdminLatestController extends Controller
 {
     public function index()
     {
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
+
         $data["latests"] = Latest::select("id" , "title" , "main_img")->paginate(5);
         return view("admin.latest.index")->with($data);
     }
 
     public function create(Request $request){
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
 
-        return view("admin.latest.create")->with($data);
+
+        return view("admin.latest.create");
     }
 
     public function delete(Request $request , Latest $latest)

@@ -11,18 +11,14 @@ use Illuminate\Support\Facades\Auth;
 class AdminMessagesController extends Controller
 {
     public function index(){
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
+
         $data["messages"] = Contact::select("id" , "name" , "email" , "body")->get();
         return view("admin.messages.index")->with($data);
     }
 
     public function show($msgId)
     {
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
+       
         $data["message"] = Contact::findOrFail($msgId);
         return view("admin.messages.show")->with($data);
     }

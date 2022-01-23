@@ -15,9 +15,7 @@ class ProjectImagesController extends Controller
 {
     public function show($projectId)
     {
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
+       
         $data['imgs'] = ProjectImg::where('project_id' , $projectId)->paginate(9);
         $data['project']= Project::select("title" , "id")->where('id' , $projectId)->first();
         return view("admin.project-imgs.show")->with($data);

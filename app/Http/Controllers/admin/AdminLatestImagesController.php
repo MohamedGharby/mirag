@@ -15,9 +15,7 @@ class AdminLatestImagesController extends Controller
 {
     public function show($latestId)
     {
-        $superRoleName = Role::where("name" , "superadmin")->first();
-        $data['role_id'] =  $superRoleName->id;
-        $data['user'] = Auth::user();
+       
         $data['imgs'] = LatestImg::where('latest_id' , $latestId)->paginate(9);
         $data['latest']= Latest::select("title" , "id")->where('id' , $latestId)->first();
         return view("admin.latest-imgs.show")->with($data);
