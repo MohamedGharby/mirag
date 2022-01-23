@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $superRoleName = Role::where("name" , "superadmin")->first();
         $data['role_id'] =  $superRoleName->id;
         $data['user'] = Auth::user();
+        if ($request->search) {
+           $data['projects'] = Project::where("title" , "like" , "%". $request->search .'%')->paginate(10);
+           return view("admin.projects.index")->with($data);
+        }
+
         $data['projects'] = Project::select('id' , 'title' , 'best' ,'img' , 'updated_at')->orderBy('best' , 'DESC')->paginate(10);
         return view("admin.projects.index")->with($data);
     }
@@ -41,6 +46,8 @@ class ProjectController extends Controller
             'img' => 'required|image|mimes:jpg,png,jpeg',
             'best' => 'nullable'
         ]);
+
+
 
 
         $best = 0;
