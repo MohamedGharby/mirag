@@ -17,7 +17,7 @@ class CreateExpertsTable extends Migration
             $table->id();
             $table->string("name", 50);
             $table->text("title", 50);
-            $table->string("img");
+            $table->string("img")->nullable();
             $table->timestamps();
         });
     }

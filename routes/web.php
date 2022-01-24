@@ -106,6 +106,9 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::delete("/invest/images/{imgId}" , [AdminInvestmentImgsController::class , "delete"]);
     //end investments imgs routes
     Route::get("/experts" , [AdminExpertController::class , "index"]);
-
+    Route::post("/experts/add" , [AdminExpertController::class , "store"]);
+    Route::post("/experts/socials",[AdminExpertController::class , "addSocial"]);
+    Route::delete("experts/delete/{expert}" , [AdminExpertController::class , "delete"]);
+    Route::put("experts/edit" , [AdminExpertController::class , "update"]);
 
 });
