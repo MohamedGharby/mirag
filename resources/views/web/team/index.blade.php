@@ -1,4 +1,4 @@
-@extends('web.layout')
+@extends('web.pages-layout')
 @section('title')
     فريقنا
 @endsection
@@ -91,19 +91,7 @@
     
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
-
-                                    <li class="current"><a href="{{ url('/team') }}">فريقنا</a></li>
-
-                                    <li><a href="{{url('/investments')}}">الإستثمار العقارى</a></li>
-    
-                                    <li><a href="{{url('/latests')}}">أخبارنا</a></li>
-    
-                                    <li><a href="{{url('/projects')}}">المشاريع</a></li>
-    
-                                    <li><a href="{{url('/about')}}">من نحن</a></li>
-    
-                                    <li><a href="{{ url('/') }}">الصفحة الرئيسية</a></li>
+                                    
     
                                 </ul>
                             </div>
@@ -168,6 +156,38 @@
     
         </header>
         <!--End Main Header -->
+@endsection
+
+@section('lowerHeader')
+    <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
+
+    <li class="current"><a href="{{ url('/team') }}">فريقنا</a></li>
+
+    <li><a href="{{url('/investments')}}">الإستثمار العقارى</a></li>
+
+    <li><a href="{{url('/latests')}}">أخبارنا</a></li>
+
+    <li><a href="{{url('/projects')}}">المشاريع</a></li>
+
+    <li><a href="{{url('/about')}}">من نحن</a></li>
+
+    <li><a href="{{ url('/') }}">الصفحة الرئيسية</a></li>
+@endsection
+
+@section('stickyHeader')
+    <li><a href="{{ url('/contact') }}">تواصل معنا</a></li>
+
+    <li class="current"><a href="{{ url('/team') }}">فريقنا</a></li>
+
+    <li><a href="{{url('/investments')}}">الإستثمار العقارى</a></li>
+
+    <li><a href="{{url('/latests')}}">أخبارنا</a></li>
+
+    <li><a href="{{url('/projects')}}">المشاريع</a></li>
+
+    <li><a href="{{url('/about')}}">من نحن</a></li>
+
+    <li><a href="{{ url('/') }}">الصفحة الرئيسية</a></li>
 @endsection
 
 @section('main')
