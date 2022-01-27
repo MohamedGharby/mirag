@@ -11,7 +11,7 @@ class ExpertController extends Controller
 {
     public function index()
     {
-        $data["experts"] = Expert::select("id" , "name" , "title")->get();
+        $data["experts"] = Expert::select("id" , "name" , "title" , "img")->get();
         $data["socialMedia"] = ExpertSocialWebsite::get();
         return view("web.team.index")->with($data);
     }

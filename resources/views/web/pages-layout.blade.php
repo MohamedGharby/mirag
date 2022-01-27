@@ -67,7 +67,7 @@
                 <div class="clearfix">
 
                     <div class="pull-left logo-box">
-                        <div class="logo"><a href="index.html"><img src="{{ asset("web/images/logo.png") }}" alt="" title=""></a></div>
+                        <div class="logo"><a href="{{ url("/") }}"><img src="{{ asset('logo/logo170.jpeg') }}" alt="" title=""></a></div>
                     </div>
 
                     <div class="pull-right upper-right clearfix">
@@ -167,7 +167,7 @@
             <div class="auto-container clearfix">
                 <!--Logo-->
                 <div class="logo pull-left">
-                    <a href="index.html" class="img-responsive"><img src="{{ asset("web/images/logo-small.png") }}" alt="" title=""></a>
+                    <a href="{{ url("/") }}" class="img-responsive"><img src="{{ asset('logo/logo110.jpg') }}" alt="" title=""></a>
                 </div>
 
                 <!--Right Col-->

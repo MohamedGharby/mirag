@@ -2670,15 +2670,34 @@ img{
 }
 
 .about-section .content-column .inner-column .sec-title{
-	margin-bottom:22px;
+	margin-bottom:25px;
 }
 
 .about-section .content-column .inner-column .text{
 	position:relative;
 	color:#777777;
-	font-size:15px;
+	font-size:20px;
+	font-weight: 700;
 	line-height:1.8em;
 	margin-bottom:50px;
+}
+
+.about-section .content-column .inner-column h3{
+	position:relative;
+	color:#0d0d0c;
+	font-size:28px;
+	font-weight: 900;
+	line-height:1.8em;
+	margin-bottom:15px;
+}
+
+.about-section .content-column .inner-column p{
+	position:relative;
+	color:#777777;
+	font-size:20px;
+	font-weight: 500;
+	line-height:1.8em;
+	margin-bottom:10px;
 }
 
 .about-section .content-column .inner-column .experiance-box span{

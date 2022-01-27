@@ -15,7 +15,7 @@
 
                         <div class="pull-left logo-box">
                             <div class="logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('web/images/logo-3.png') }}" alt="" title=""></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('logo/logo170.jpeg') }}" alt="" title=""></a>
                             </div>
                         </div>
 
@@ -124,7 +124,7 @@
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="index.html" class="img-responsive"><img src="{{asset('images/logo-small.png')}}" alt="" title=""></a>
+                        <a href="{{ url("/") }}" class="img-responsive"><img src="{{ asset("logo/logo110.jpg") }}" alt="" title=""></a>
                     </div>
 
                     <!--Right Col-->
@@ -523,7 +523,10 @@
                             <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
                         </ul>
                     	<div class="image">
-                        	<img src="{{ asset("uploads/$expert->img") }}" alt="" />
+                            @php
+                                $image = str_replace('public/', 'storage/', $expert->img);
+                            @endphp
+                        	<img src="{{ asset("$image") }}" alt="" />
                         </div>
                         <div class="lower-box">
                         	<h3><a href="#">{{$expert->name}}</a></h3>
