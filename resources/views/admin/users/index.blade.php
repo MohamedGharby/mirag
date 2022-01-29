@@ -31,11 +31,8 @@
       <th scope="row">{{$loop->iteration}}</th>
       <td>{{$person->name}}</td>
       <td>{{$person->email}}</td>
-      @foreach ($roles as $role)
-      @if($role->id == $person->role_id)
-      <td>{{$role->name}}</td>
-      @endif
-      @endforeach
+      <td>{{$person->role->name}}</td>
+
       <td>
         <button type="button" class="btn btn-primary edit-btn" data-id="{{$person->id}}" data-name="{{$person->name}}" data-email="{{$person->email}}" data-toggle="modal" data-target="#modal-xl-edit"><i class="fas fa-user-edit"></i></button>
         <a class="btn btn-danger" href="{{ url("dashboard/user/delete/$person->id")}}"> <i class="fas fa-trash"></i></a>

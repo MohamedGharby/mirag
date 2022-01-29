@@ -13,7 +13,6 @@ class SuperAdminController extends Controller
     public function index()
     {
 
-        $data['roles'] = Role::select("name" , "id")->get();
         $data['users'] = User::select('id' , 'name' ,'email','role_id')->paginate(10);
         return view("admin.users.index")->with($data);
     }
