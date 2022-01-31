@@ -15,7 +15,7 @@ class AdminLatestImagesController extends Controller
 {
     public function show($latestId)
     {
-       
+
         $data['imgs'] = LatestImg::where('latest_id' , $latestId)->paginate(9);
         $data['latest']= Latest::select("title" , "id")->where('id' , $latestId)->first();
         return view("admin.latest-imgs.show")->with($data);
@@ -45,5 +45,29 @@ class AdminLatestImagesController extends Controller
         Storage::delete($LatesImg->name);
         $request->session()->flash("message" , "Image deleted successfully");
         return back();
+    }
+
+    public function MakeMain(Request $request , $image , $latestId)
+    {
+        //grab the two images
+        $latest = Latest::findOrFail($latestId);
+        $mainImg = $latest->main_img;
+        $image = LatestImg::findOrFail($image);
+        $imgName = $image->name;
+
+        //swapping imgs
+
+        $latest->update([
+          "main_img" => $imgName
+        ]);
+
+        $image->update([
+            "name" => $mainImg
+        ]);
+
+        $request->session()->flash("message" , "Image maked main successfully");
+
+        return back();
+
     }
 }

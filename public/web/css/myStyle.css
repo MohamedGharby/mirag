@@ -5,5 +5,9 @@
     left: 0;
     top: 0;
     z-index: 19919199191919919199191;
-    background-color: seashell;
+    background-color:#FFC500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }

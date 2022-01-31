@@ -17,7 +17,7 @@
     <!--Color Themes-->
     <link id="theme-color-file" href="{{asset('web/css/color-themes/default-theme.css')}}" rel="stylesheet">
 
-      
+
     <link rel="shortcut icon" href="{{asset('web/images/favicon.png')}}" type="image/x-icon">
     <link rel="icon" href="{{asset('web/images/favicon.png')}}" type="image/x-icon">
     @yield("styles")
@@ -35,7 +35,7 @@
 
         <!-- Preloader -->
         <div class="myLoader">
-            <img style="width: 100%;"  src="{{asset('construction-gif-2.gif')}}" alt="">
+            <img  style="width: 100%;"  src="{{asset('construction-gif-2.gif')}}" alt="">
         </div>
 
         @yield('header')

@@ -74,6 +74,7 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::get("/project/images/{projectId}" , [ProjectImagesController::class , "show"]);
     Route::post("/project/images" , [ProjectImagesController::class , "store"]);
     Route::delete("/images/{image}" , [ProjectImagesController::class , "delete"]);
+    Route::post("/images/{image}/{projectId}" , [ProjectImagesController::class , "MakeMain"]);
     //end project images routes
     // news routes
     Route::get("/news" , [AdminLatestController::class , "index"]);
@@ -87,6 +88,7 @@ Route::prefix("dashboard")->middleware(['auth'])->group(function(){
     Route::get("news/images/{latestId}" , [AdminLatestImagesController::class , "show"] );
     Route::post("/news/images" , [AdminLatestImagesController::class , "store"]);
     Route::delete("/news/images/{imgId}", [AdminLatestImagesController::class , "delete"]);
+    Route::post("/news/images/{image}/{newsId}" , [AdminLatestImagesController::class , "MakeMain"]);
     //end news images routes
     //companies routes
     Route::get("/companies", [AdminCompanyController::class , "index"]);

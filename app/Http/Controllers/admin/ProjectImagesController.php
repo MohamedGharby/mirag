@@ -15,7 +15,7 @@ class ProjectImagesController extends Controller
 {
     public function show($projectId)
     {
-       
+
         $data['imgs'] = ProjectImg::where('project_id' , $projectId)->paginate(9);
         $data['project']= Project::select("title" , "id")->where('id' , $projectId)->first();
         return view("admin.project-imgs.show")->with($data);
@@ -28,7 +28,7 @@ class ProjectImagesController extends Controller
             'project_id' => 'required|exists:projects,id'
         ]);
 
-        $path = Helper::uploadImage("public/projects" , $data["img"]);
+        $path = Helper::uploadImage("public/projects" , $data["name"]);
         //$path = Storage::putFile("public/projects" , $data['name']);
         $data['name']= $path;
         ProjectImg::create($data);
@@ -44,5 +44,28 @@ class ProjectImagesController extends Controller
         Storage::delete($prImg->name);
         $request->session()->flash("message" , "Image deleted successfully");
         return back();
+    }
+    public function MakeMain(Request $request , $image , $projectId)
+    {
+        //grab the two images
+        $project = Project::findOrFail($projectId);
+        $mainImg = $project->img;
+        $image = ProjectImg::findOrFail($image);
+        $imgName = $image->name;
+
+        //swapping imgs
+
+        $project->update([
+          "img" => $imgName
+        ]);
+
+        $image->update([
+            "name" => $mainImg
+        ]);
+
+        $request->session()->flash("message" , "Image maked main successfully");
+
+        return back();
+
     }
 }

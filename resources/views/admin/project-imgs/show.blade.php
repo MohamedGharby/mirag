@@ -26,27 +26,34 @@
         </div>
     </div>
     @include('admin.inc.message')
+
     <div class="row p-3">
 
-        @foreach ($imgs as $img)
 
-            @php
-                $img->name = str_replace('public/', 'storage/', $img->name);
-            @endphp
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img style="height: 300px" src="{{ asset("$img->name") }}" class="card-img-top">
-                    <div class="card-body d-flex align-items-center justify-content-center">
-                        <form  id="delete_form" action="{{url("dashboard/images/$img->id")}}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button  type="submit" class="btn btn-danger px-3 mx-2 form">Delete</button>
-                        </form>
-                        <a href="#" class="btn btn-primary px-3 mx-2">Make main</a>
+                @foreach ($imgs as $img)
+
+                    @php
+                        $img->name = str_replace('public/', 'storage/', $img->name);
+                    @endphp
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img style="height: 300px" src="{{ asset("$img->name") }}" class="card-img-top">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <form  id="delete_form" action="{{url("dashboard/images/$img->id")}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button  type="submit" class="btn btn-danger px-3 mx-2 form">Delete</button>
+                                </form>
+                                <form action="{{ url("dashboard/images/$img->id/$img->project_id") }}" method="post">
+                                    @csrf
+                                    <button type="submit" class="btn btn-primary px-3 mx-2">Make main</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        @endforeach
+                @endforeach
+
+
     </div>
     <div class="d-flex justify-content-center">
         {{ $imgs->links() }}

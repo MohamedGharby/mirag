@@ -42,7 +42,10 @@
                             @method('DELETE')
                             <button  type="submit" class="btn btn-danger px-3 mx-2 form">Delete</button>
                         </form>
-                        <a href="#" class="btn btn-primary px-3 mx-2">Make main</a>
+                        <form action="{{ url("dashboard/news/images/$img->id/$img->latest_id") }}" method="post">
+                             @csrf
+                            <button type="submit" class="btn btn-primary px-3 mx-2">Make main</button>
+                        </form>
                     </div>
                 </div>
             </div>
