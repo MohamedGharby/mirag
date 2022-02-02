@@ -27,53 +27,53 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-12">
                 <div class="card card-info">
                     <div class="card-header">
-                        <h3 class="card-title">Login</h3>
+                        <h3 class="card-title">Reset Password</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
                     @include('admin.inc.message')
-                    <form method="POST" action="{{url('login')}}" class="form-horizontal">
 
+                    <form method="POST" action="{{url('reset-password')}}" class="form-horizontal">
                         @csrf
                         <div class="card-body">
+                        <div class="form-group row">
+                                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name">
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <label for="email" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="password" class="col-sm-2 col-form-label">Password</label>
                                 <div class="col-sm-10">
-                                    <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="offset-sm-2 col-sm-10">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="Checkbox">
-                                        <label class="form-check-label" name="remember" for="Checkbox">Remember me</label>
-
-                                    </div>
+                                <label for="confirmPassword" class="col-sm-2 col-form-label">Confirm Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" name="password_confirmation" class="form-control" id="confirmPassword" placeholder="Password">
                                 </div>
                             </div>
+                            <input type="hidden" name="token" value="{{request()->route('token')}}">
+
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-info">Login</button>
+                            <button type="submit" class="btn btn-info">Reset Password</button>
                         </div>
                         <!-- /.card-footer -->
                     </form>
-
-
-
                 </div>
             </div>
-                <a class="btn btn-info" href="{{ url('forgot-password') }}">forgot password-></a>
 
         </div>
     </div>
-
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
