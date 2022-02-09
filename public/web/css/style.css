@@ -1288,7 +1288,7 @@ img{
 }
 
 .main-header.header-style-five .header-upper .logo-box{
-	padding:40px 0px;
+	padding:0px 0px;
 }
 
 .main-header.header-style-five .header-upper .upper-right{
@@ -1901,6 +1901,7 @@ img{
 	position:relative;
 	margin-left:30px;
 	margin-right:0px !important;
+    margin-top: 10px;
 }
 
 .sticky-header .main-menu .navigation > li:before,

@@ -16,4 +16,16 @@ class Expert extends Model
     {
         return $this->hasMany(ExpertSocialWebsite::class);
     }
+
+    public function getExpertId($idEx){
+
+        foreach ($this->socialMedia as $onesocial) {
+            if ($idEx == $onesocial->expert_id) {
+                return  $onesocial->expert_id;
+            }
+
+        }
+
+
+    }
 }

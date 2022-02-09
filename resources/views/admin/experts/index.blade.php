@@ -85,7 +85,7 @@
                                     @method("DELETE")
                                     <button type="submit" class="btn btn-danger ">Delete</button>
                                 </form>
-                                <button id="social-btn" data-expert-id="{{ $expert->id }}" data-toggle= "modal" data-target="#modal-xl-social" type="button" class="btn btn-primary">add socials</button>
+                                <button  data-expert-id="{{ $expert->getExpertId($expert->id) }}" data-toggle= "modal" data-target="#modal-xl-social" type="button" class="btn btn-primary social-btn">add socials</button>
                             </div>
                         </div>
                         <!-- /.card-body -->
@@ -256,7 +256,7 @@
                     <form method="POST" action="{{ url('dashboard/experts/socials') }}" class="form-horizontal">
                         @csrf
                         <div class="card-body">
-                            <input id="social" type="hidden" name="expert_id">
+                            <input id="social" type="hidden" name="expert_id" >
                             <div class="form-group row">
                                 <label for="password" class="col-sm-2 col-form-label">Facebook</label>
                                 <div class="col-sm-10">
@@ -337,9 +337,9 @@
         })
 
 
-        $("#social-btn").click(function() {
+        $(".social-btn").click(function() {
             let id = $(this).attr("data-expert-id")
-            console.log(id);
+             console.log(id)
             $("#social").val(id)
         })
     </script>

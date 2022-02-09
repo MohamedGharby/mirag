@@ -32,6 +32,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- /.card-header -->
                     <!-- form start -->
                     @include('admin.inc.message')
+                    @include('admin.inc.errors')
 
                     <form method="POST" action="{{url('reset-password')}}" class="form-horizontal">
                         @csrf

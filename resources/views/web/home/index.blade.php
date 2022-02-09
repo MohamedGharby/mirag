@@ -15,7 +15,7 @@
 
                         <div class="pull-left logo-box">
                             <div class="logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('logo/logo170.jpeg') }}" alt="" title=""></a>
+                                <a href="{{ url('/') }}"><img  src="{{ asset('logo/logo318.jfif') }}" alt="" title=""></a>
                             </div>
                         </div>
 
@@ -77,16 +77,16 @@
                                     <li><a href="{{ url('/team') }}">فريقنا</a></li>
 
                                     <li><a href="{{url('/investments')}}">الإستثمار العقارى</a></li>
-                                    
+
                                     <li><a href="{{url('/latests')}}">أخبارنا</a></li>
-                                
+
                                     <li><a href="{{ url('/projects') }}">المشاريع</a></li>
 
                                     <li ><a href="{{url('/about')}}">من نحن</a></li>
 
                                     <li class="current"><a href="{{url('/')}}">الرئيسية</a></li>
                                 </ul>
-                                
+
                             </div>
                         </nav>
                         <!-- Main Menu End-->
@@ -124,7 +124,7 @@
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="{{ url("/") }}" class="img-responsive"><img src="{{ asset("logo/logo110.jpg") }}" alt="" title=""></a>
+                        <a href="{{ url("/") }}" class="img-responsive"><img src="{{ asset("logo/logo170.jpeg") }}" alt="" title=""></a>
                     </div>
 
                     <!--Right Col-->
@@ -146,9 +146,9 @@
                                     <li><a href="{{ url('/team') }}">فريقنا</a></li>
 
                                     <li><a href="{{url('/investments')}}">الإستثمار العقارى</a></li>
-                                    
+
                                     <li><a href="{{url('/latests')}}">أخبارنا</a></li>
-                                
+
                                     <li><a href="{{ url('/projects') }}">المشاريع</a></li>
 
                                     <li ><a href="{{url('/about')}}">من نحن</a></li>
@@ -320,13 +320,13 @@
                             <div class="title">من نحن</div>
                             <h2>شركة ميراج للمقاولات</h2>
                         </div>
-                        <div class="bold-text">شركة ميراج للمقاولات تاسست سنه (2009) و اكتسبت الافضلية و التميز بين الشركات و بشهادة البنوك و شركات التمويل المالى 
+                        <div class="bold-text">شركة ميراج للمقاولات تاسست سنه (2009) و اكتسبت الافضلية و التميز بين الشركات و بشهادة البنوك و شركات التمويل المالى
                                 و نزاهة التعامل مع الكل و ثقة العملاء ,و لنا العديد من العقود المبرمة بين القطاع الحكومي و الاهلية مع الشركات, و قد تخصصت منذ انطلاقها فى اعمال المقاولات المختلفة . وتتمثل فى:-
                                 م/عاطف الشيخ (رئيس مجلس الادارة للشركة )
                                 اللواء/ محمد الروبى (نائب رئيس مجلس الادارة)
                                 م/ عاطف طه العضو المنتدب للتنفيذ
                                 و بخبرتهم الكبيره فى مجال الطرق و الكبارى مع كبرى الشركات</div>
-                       
+
                         <a href="{{ url('/about')}}" class="theme-btn btn-style-one">للمزيد..</a>
                     </div>
                 </div>
@@ -467,7 +467,10 @@
                         	<div class="project-block">
                             	<div class="inner-box">
                                 	<div class="image">
-                                        <img src="{{asset("uploads/$bestProject->img")}}" alt="" />
+                                        @php
+                                        $image = str_replace('public/', 'storage/', $bestProject->img);
+                                      @endphp
+                                        <img src="{{asset("$image")}}" alt="" />
                                         <div class="overlay-box">
                                         	<div class="content">
                                             	<h3>{{$bestProject->title}}</h3>
@@ -486,7 +489,7 @@
                                                        <div class="text">{{$bestProject->desc}}</div>
                                                      @else
                                                         <div class="text">{{$bestProject->desc}}</div>
-                                                     @endif   
+                                                     @endif
                                                     <a href="{{ url("/projects/$bestProject->id") }}" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
 
                                                 </div>
@@ -497,7 +500,7 @@
                             </div>
                             @endforeach
 
-                            
+
     </section>
 
     <!--Team Section-->
@@ -536,10 +539,10 @@
                 </div>
                 @endforeach
 
-                
 
-            
-                
+
+
+
 
             </div>
 
@@ -547,7 +550,7 @@
     </section>
     <!--End Team Section-->
 
-    
+
 
     <!--News Section-->
     <section class="news-section">
@@ -559,7 +562,7 @@
             </div>
             <div class="row clearfix">
                 @foreach ($latests as $latest)
-                
+
                 <div class="news-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="image">
@@ -573,7 +576,7 @@
                         </div>
                     </div>
                 </div>
-            @endforeach  
+            @endforeach
 
 
             </div>
@@ -581,7 +584,7 @@
     </section>
     <!--End News Section-->
 
-    
+
 
 
 
