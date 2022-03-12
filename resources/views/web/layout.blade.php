@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mirag | @yield('title') </title>
+    <title>Arked | @yield('title') </title>
     <!-- Stylesheets -->
     <link href="{{asset('web/css/bootstrap.css')}}" rel="stylesheet">
     <link href="{{asset('web/plugins/revolution/css/settings.css')}}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->

@@ -55,7 +55,7 @@
     	<div class="auto-container">
         	<!--Title Box-->
         	<div class="title-box">
-            	<div class="title">ارسب لنا رسالة</div>
+            	<div class="title">ارسل لنا رسالة</div>
                 <h2>لديك ايه اسئلة ؟</h2>
                 <div class="text">شكرا لاهتمامك بشركتنا و خدمتنا و نرجو ان كان لديك ايه اسئلة لا تتردد في التواصل معنا</div>
             </div>

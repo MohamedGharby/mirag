@@ -15,7 +15,7 @@
 
                         <div class="pull-left logo-box">
                             <div class="logo">
-                                <a href="{{ url('/') }}"><img  src="{{ asset('logo/logo318.jfif') }}" alt="" title=""></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('logo/logo318.jfif') }}" alt="arked" title="arked"></a>
                             </div>
                         </div>
 
@@ -25,8 +25,8 @@
                             <div class="upper-column info-box">
                                 <div class="icon-box"><span class="flaticon-clock"></span></div>
                                 <ul>
-                                    <li><strong>09:00 am - 06:00 pm</strong></li>
-                                    <li>We Serve with Pleasure</li>
+                                    <li><strong> من 9 ص إلى 6 م </strong></li>
+                                    <li>نحن نسعد بخدمتك</li>
                                 </ul>
                             </div>
 
@@ -34,8 +34,8 @@
                             <div class="upper-column info-box">
                                 <div class="icon-box"><span class="flaticon-phone-call"></span></div>
                                 <ul>
-                                    <li><strong>(01) 98 756 321 01</strong></li>
-                                    <li>Discuss any Queries</li>
+                                    <li><strong>01110037972</strong></li>
+                                    <li>للإستفسارات</li>
                                 </ul>
                             </div>
 
@@ -43,8 +43,8 @@
                             <div class="upper-column info-box">
                                 <div class="icon-box"><span class="flaticon-placeholder-1"></span></div>
                                 <ul>
-                                    <li><strong>location</strong></li>
-                                    <li>185, Los Angeles, USA</li>
+                                    <li><strong>موقعنا</strong></li>
+                                    <li> مكرم عبيد / القاهره </li>
                                 </ul>
                             </div>
 
@@ -318,7 +318,7 @@
                     <div class="inner-column">
                         <div class="sec-title">
                             <div class="title">من نحن</div>
-                            <h2>شركة ميراج للمقاولات</h2>
+                            <h2>شركة أركيد للبنيه الاساسية</h2>
                         </div>
                         <div class="bold-text">شركة ميراج للمقاولات تاسست سنه (2009) و اكتسبت الافضلية و التميز بين الشركات و بشهادة البنوك و شركات التمويل المالى
                                 و نزاهة التعامل مع الكل و ثقة العملاء ,و لنا العديد من العقود المبرمة بين القطاع الحكومي و الاهلية مع الشركات, و قد تخصصت منذ انطلاقها فى اعمال المقاولات المختلفة . وتتمثل فى:-

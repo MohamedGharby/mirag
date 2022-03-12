@@ -1121,7 +1121,7 @@ img{
 	float:left;
 	min-height:56px;
 	margin-left:50px;
-	font-size:13px;
+	font-size:20px;
 	color:#777777;
 	text-align:left;
 	padding:0px 0px 20px 65px;
@@ -10499,6 +10499,7 @@ footer .footer-bottom .footer-nav li a:hover{
 	margin:0px;
 }
 
+
 .rtl .header-top-two .top-right .links li{
 	margin-right:0px;
 	margin-left:25px;
@@ -10848,7 +10849,7 @@ footer .footer-bottom .footer-nav li a:hover{
 
 .rtl .main-header.header-style-five .info-box{
 	text-align:right;
-	padding-left:65px;
+	padding-left:87px;
 	padding-right:120px;
 }
 
