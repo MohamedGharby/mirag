@@ -15,7 +15,7 @@
 
                         <div class="pull-left logo-box">
                             <div class="logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('logo/logo100.jfif') }}" alt="arked" title="arked"></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('logo/logo318.jfif') }}" alt="arked" title="arked"></a>
                             </div>
                         </div>
 
