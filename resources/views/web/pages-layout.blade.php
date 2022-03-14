@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mirag | @yield('title') </title>
+    <title>Arked | @yield('title') </title>
     <!-- Stylesheets -->
     <link href="{{asset('web/css/bootstrap.css')}}" rel="stylesheet">
     <link href="{{asset('web/plugins/revolution/css/settings.css')}}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
@@ -48,14 +48,14 @@
                     <!--Top Left-->
                     <div class="top-left clearfix">
                         <ul class="links clearfix">
-                            <li><a href="#"><span class="icon fa fa-map-marker"></span>185, Los Angeles, USA</a></li>
-                            <li><a href="#"><span class="icon fa fa-envelope"></span>info@emarat.com</a></li>
+                            <li><a href="#"><span class="icon fa fa-map-marker"></span>مكرم عبيد / القاهره</a></li>
+                            <li><a href="#"><span class="icon fa fa-envelope"></span>info@arked.com</a></li>
                         </ul>
                     </div>
 
                     <!--Top Right-->
                     <div class="top-right pull-right">
-                        <div class="text">Welcome to Emarat Construction Template</div>
+                        <div class="text">مرحبا بكم فى أركيد للبنيه الأساسيه والإستثمار العقارى</div>
                     </div>
                 </div>
             </div>
@@ -76,8 +76,8 @@
                         <div class="upper-column info-box">
                             <div class="icon-box"><span class="flaticon-clock-2"></span></div>
                             <ul>
-                                <li><strong>09:00 am - 06:00 pm</strong></li>
-                                <li>We Serve with Pleasure</li>
+                                <li><strong>من 9 ص إلى 6 م</strong></li>
+                                <li>نحن نسعد بخدمتكم</li>
                             </ul>
                         </div>
 
@@ -85,8 +85,8 @@
                         <div class="upper-column info-box">
                             <div class="icon-box"><span class="flaticon-phone-call"></span></div>
                             <ul>
-                                <li><strong>(01) 98 756 321 01</strong></li>
-                                <li>Discuss any Queries</li>
+                                <li><strong>01110037972</strong></li>
+                                <li>للإستفسارات</li>
                             </ul>
                         </div>
 
@@ -131,32 +131,7 @@
 					</nav>
 					<!-- Main Menu End-->
 
-                    <div class="outer-box clearfix">
-
-                        <!--Search Box-->
-                        <div class="search-box-outer">
-                            <div class="dropdown">
-                                <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                                <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                                    <li class="panel-outer">
-                                        <div class="form-container">
-                                            <form method="post" action="blog.html">
-                                                <div class="form-group">
-                                                    <input type="search" name="field-name" value="" placeholder="Search Here" required>
-                                                    <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="advisor-box">
-                            <a href="index.html" class="theme-btn advisor-btn">Get A Quote</a>
-                        </div>
-
-                    </div>
+                    
                 </div>
             </div>
         </div>

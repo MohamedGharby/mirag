@@ -15,7 +15,7 @@
 
                         <div class="pull-left logo-box">
                             <div class="logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('logo/logo318.jfif') }}" alt="arked" title="arked"></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('logo/logo100.jfif') }}" alt="arked" title="arked"></a>
                             </div>
                         </div>
 
@@ -179,7 +179,7 @@
                 <ul>
 
                 	<li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{{ asset('web/images/main-slider/test1.jpg') }}{{-- images/main-slider/image-6.jpg --}}" data-title="Slide Title" data-transition="parallaxvertical">
-                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{{ asset('web/images/main-slider/test1.jpg') }}{{-- asset('web/images/main-slider/image-6.jpg') --}}">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{{ asset('uploads/home/SAVE_20220114_163110.jpg') }}{{-- asset('web/images/main-slider/image-6.jpg') --}}">
 
                     <div class="tp-caption"
                     data-paddingbottom="[0,0,0,0]"
@@ -216,7 +216,7 @@
                     data-y="['middle','middle','middle','middle']"
                     data-textalign="['top','top','top','top']"
                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<div class="title text-center">we are Startup Business</div>
+                    	<div class="title text-center">نحن إختيارك الأفضل</div>
                     </div>
 
                     <div class="tp-caption"
@@ -235,13 +235,13 @@
                     data-y="['middle','middle','middle','middle']"
                     data-textalign="['top','top','top','top']"
                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<h2 class=" text-center"><span class="theme_color">Building World </span>Togather</h2>
+                    	<h2 class=" text-center"><span class="theme_color"> هيا بنا نبنى عالمنا </span>معا</h2>
                     </div>
 
                     </li>
 
                     <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{{ asset('web/images/main-slider/test2.jpg') }}{{-- images/main-slider/image-1.jpg --}}" data-title="Slide Title" data-transition="parallaxvertical">
-                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{{ asset('web/images/main-slider/test2.jpg') }}{{-- asset('web/images/main-slider/image-1.jpg') --}}">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{{ asset('uploads/home/SAVE_20220114_163042.jpg') }}{{-- asset('web/images/main-slider/image-1.jpg') --}}">
 
                     <div class="tp-caption"
                     data-paddingbottom="[0,0,0,0]"
@@ -278,7 +278,7 @@
                     data-y="['middle','middle','middle','middle']"
                     data-textalign="['top','top','top','top']"
                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<div class="title text-center">we are Startup Business</div>
+                    	<div class="title text-center">نحن إختيارك الأفضل</div>
                     </div>
 
                     <div class="tp-caption"
@@ -297,7 +297,7 @@
                     data-y="['middle','middle','middle','middle']"
                     data-textalign="['top','top','top','top']"
                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<h2 class=" text-center"><span class="theme_color">Building World </span>Togather</h2>
+                    	<h2 class=" text-center"><span class="theme_color">هيا بنا نبنى عالمنا </span>معا</h2>
                     </div>
 
                     </li>
@@ -335,7 +335,7 @@
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="image wow slideInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <img src="{{ asset('web/images/resource/about.jpg') }}" alt="" />
+                            <img src="{{ asset('uploads/about/SAVE_20220114_163053.jpg') }}" alt="" />
                         </div>
                     </div>
                 </div>
@@ -345,18 +345,6 @@
     </section>
     <!--End About Section-->
 
-    <!--Fun Facts Section-->
-    <div class="fact-counter-section" style="background-image:url(web/images/main-slider/test1.jpg);">
-        <div class="fact-counter">
-            <div class="auto-container">
-                <div class="row clearfix">
-
-                </div>
-            </div>
-        </div>
-        <div class="outer-image"><img src="{{asset('web/images/resource/image-1.png')}}" alt="" /></div>
-    </div>
-    <!--End Fun Facts Section-->
 
     <!--Services Section-->
     <section class="services-section">
@@ -370,7 +358,7 @@
 
                 <!--Services Block-->
                 <div class="services-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box" style="background-image:url(images/resource/service-1.jpg)">
+                	<div class="inner-box" style="background-image:url(web/images/resource/service-1.jpg)">
                     	<div class="icon-box">
                         	<span class="icon flaticon-sketch"></span>
                         </div>
@@ -381,7 +369,7 @@
 
                 <!--Services Block-->
                 <div class="services-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box" style="background-image:url(images/resource/service-1.jpg)">
+                	<div class="inner-box" style="background-image:url(web/images/resource/service-1.jpg)">
                     	<div class="icon-box">
                         	<span class="icon flaticon-house-plans"></span>
                         </div>
@@ -392,7 +380,7 @@
 
                 <!--Services Block-->
                 <div class="services-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box" style="background-image:url(images/resource/service-1.jpg)">
+                	<div class="inner-box" style="background-image:url(web/images/resource/service-1.jpg)">
                     	<div class="icon-box">
                         	<span class="icon flaticon-skyline"></span>
                         </div>
@@ -403,7 +391,7 @@
 
                 <!--Services Block-->
                 <div class="services-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box" style="background-image:url(images/resource/service-1.jpg)">
+                	<div class="inner-box" style="background-image:url(web/images/resource/service-1.jpg)">
                     	<div class="icon-box">
                         	<span class="icon flaticon-document"></span>
                         </div>
@@ -414,7 +402,7 @@
 
                 <!--Services Block-->
                 <div class="services-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box" style="background-image:url(images/resource/service-1.jpg)">
+                	<div class="inner-box" style="background-image:url(web/images/resource/service-1.jpg)">
                     	<div class="icon-box">
                         	<span class="icon flaticon-accounting"></span>
                         </div>
@@ -425,7 +413,7 @@
 
                 <!--Services Block-->
                 <div class="services-block col-lg-4 col-md-6 col-sm-12">
-                	<div class="inner-box" style="background-image:url(images/resource/service-1.jpg)">
+                	<div class="inner-box" style="background-image:url(web/images/resource/service-1.jpg)">
                     	<div class="icon-box">
                         	<span class="icon flaticon-briefing"></span>
                         </div>
@@ -440,7 +428,7 @@
     <!--End Services Section-->
 
     <!--Project Section-->
-    <section class="project-section" style="background-image:url(images/background/3.jpg)">
+    <section class="project-section" style="background-image:url(web/images/background/3.jpg)">
     	<div class="auto-container">
 
         	<!--Porfolio Tabs-->

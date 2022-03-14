@@ -41,7 +41,7 @@
 
 @section('main')
     	<!--Page Title-->
-        <section class="page-title" style="background-image:url(web/images/background/13.jpg)">
+        <section class="page-title" style="background-image:url(uploads/about/SAVE_20220114_163026.jpg)">
             <div class="auto-container">
                 <h1>من نحن</h1>
                 <ul class="page-breadcrumb">
@@ -90,7 +90,7 @@
                     <div class="image-column col-lg-6 col-md-12 col-sm-12">
                         <div class="inner-column">
                             <div class="image wow slideInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                <img src="{{ asset('web/images/resource/about.jpg') }}" alt="" />
+                                <img src="{{ asset('uploads/about/SAVE_20220114_163053.jpg') }}" alt="" />
                             </div>
                         </div>
                     </div>
