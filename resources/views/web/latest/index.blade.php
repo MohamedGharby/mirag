@@ -62,7 +62,10 @@
                 <div class="news-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="image">
-                            <a href="{{ url("latests/$latest->id") }}"><img src="{{ asset("uploads/$latest->main_img") }}" alt="" /></a>
+                            @php
+                                $image = str_replace('public/', 'storage/', $latest->main_img);
+                            @endphp
+                            <a href="{{ url("latests/$latest->id") }}"><img src="{{ asset("uploads/$image") }}" alt="" /></a>
                             <div class="post-date"><span>{{ $latest->created_at->format('d') }}</span> {{ $latest->created_at->format('M') }}</div>
                         </div>
                         <div class="lower-content">
