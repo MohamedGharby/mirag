@@ -62,12 +62,12 @@
 
             <div class="row clearfix">
                 @foreach ($experts as $expert)
-                    
+
                 <!--Team Block-->
                 <div class="team-block col-lg-4 col-md-6 col-sm-12">
                 	<div class="inner-box">
                         @foreach ($expert->socialMedia as $social)
-                            
+
                     	<ul class="social-icon-one">
                         	<li><a href="{{ $social->facebook }}"><span class="fa fa-facebook"></span></a></li>
                             <li><a href="{{ $social->twitter }}"><span class="fa fa-twitter"></span></a></li>
@@ -76,10 +76,7 @@
                         </ul>
                         @endforeach
                     	<div class="image">
-                            @php
-                                $image = str_replace('public/', 'storage/', $expert->img);
-                            @endphp
-                        	<img src="{{ asset("$image") }}" alt="{{ $expert->name }}" />
+                        	<img src="{{ asset("uploads/experts/$expert->img") }}" alt="{{ $expert->name }}" />
                         </div>
                         <div class="lower-box">
                         	<h3>{{ $expert->name }}</h3>

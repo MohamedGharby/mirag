@@ -29,14 +29,18 @@ class AdminExpertController extends Controller
 
 
         if ($request->hasFile("img")) {
-            $path = Helper::uploadImage("public/experts" , $data["img"]);
-             $data["img"] = $path;
+            $path = Helper::uploadImage( $request , "img" ,'uploads/experts' );
+            $data["img"] = $path;
+
              Expert::create($data);
         }else{
             $data["img"] = null;
             Expert::create($data);
         }
 
+
+
+    // Helper::magic("C:/xampp/htdocs/mirag2/mirag/storage/app/public/experts" , "C:\xampp\htdocs\mirag2\mirag\public\storage2");
 
 
          return back();
@@ -100,7 +104,7 @@ class AdminExpertController extends Controller
 
            if ($request->hasFile("img")) {
                Storage::delete($expert->img);
-               $path= Helper::uploadImage("public/experts" , $request->img);
+               $path = Helper::uploadImage( $request , "img" ,'uploads/experts' );
                $expert->update([
                 "id"=>$request->id,
                 "name"=>$request->name,
