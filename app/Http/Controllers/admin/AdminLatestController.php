@@ -46,8 +46,10 @@ class AdminLatestController extends Controller
             'main_img' => 'required|image|mimes:jpg,png,jpeg',
         ]);
 
-        $path = Helper::uploadImage("public/latests" , $data["main_img"]);
+        $path = Helper::uploadImage($request , "main_img" , 'uploads/latests');
        // $path = Storage::putFile("public/latests" , $data['main_img']);
+
+
         $data['main_img']= $path;
 
         Latest::create($data);
@@ -74,8 +76,10 @@ class AdminLatestController extends Controller
 
         if ($request->hasFile('main_img')) {
             Storage::delete($latest->img);
-             $path = Helper::uploadImage("public/latests" , $data["main_img"]);
+            $path = Helper::uploadImage($request , "main_img" , 'uploads/latests');
             //$path = Storage::putFile("public/latests" , $data['main_img']);
+
+
             $data['main_img'] = $path;
         }
 

@@ -37,9 +37,9 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $latest->title }}</td>
                         @php
-                            $latest->main_img = str_replace('public/', 'storage/', $latest->main_img);
+                          //  $latest->main_img = str_replace('public/', 'storage/', $latest->main_img);
                         @endphp
-                        <td><img src="{{ asset("$latest->main_img") }}" style="height: 50px; width:50px"></td>
+                        <td><img src="{{ asset("uploads/latests/$latest->main_img") }}" style="height: 50px; width:50px"></td>
                         <td>
                             <a href="{{  url("dashboard/news/edit/$latest->id")}}"  class="btn btn-primary">
                                 <i class="fas fa-user-edit"></i>

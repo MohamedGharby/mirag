@@ -51,7 +51,7 @@
 
     <!--Realstate Investment Section-->
     @foreach ($companies as $company)
-    
+
     <section class="services-section-two">
     	<div class="auto-container">
         	<div class="p-3 d-flex justify-content-end align-items-center">
@@ -59,7 +59,7 @@
             </div>
             <div class="three-item-carousel owl-carousel owl-theme">
                 @foreach ($company->investments as $invest)
-                    
+
                 <!--Services Block Two-->
                 <div class="services-block-two">
                 	<div class="inner-box">
@@ -91,5 +91,5 @@
         </div>
     </section>
     @endforeach
-    <!--End Realstate Investment Section-->            
+    <!--End Realstate Investment Section-->
 @endsection

@@ -28,9 +28,14 @@ class ProjectImagesController extends Controller
             'project_id' => 'required|exists:projects,id'
         ]);
 
-        $path = Helper::uploadImage("public/projects" , $data["name"]);
-        //$path = Storage::putFile("public/projects" , $data['name']);
-        $data['name']= $path;
+        if ($request->hasFile("name")) {
+            $path = Helper::uploadImage($request , "name" , "uploads/projectImgs");
+             //$path = Storage::putFile("public/projects" , $data['name']);
+
+                 $data['name']= $path;
+        }
+
+
         ProjectImg::create($data);
 
         $request->session()->flash("message" , "Image added successfully");

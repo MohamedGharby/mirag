@@ -64,18 +64,18 @@
 
                 <!--Filter-->
                 <div class="filters text-center clearfix">
-                    
+
                 </div>
-              
+
                 <div class="filter-list row clearfix">
 
                     <!--Project Block-->
                     @foreach ($projects as $project)
-                    
+
                     <div class="project-block col-lg-3 col-md-6 col-sm-12">
 						<div class="inner-box">
 							<div class="image">
-								<img src="{{ asset("uploads/$project->img") }}" alt="project image" />
+								<img src="{{ asset("uploads/projects/$project->img") }}" alt="project image" />
 								<div class="overlay-box">
 									<div class="content">
 										<h3>{{$project->title}}</h3>
@@ -86,7 +86,7 @@
 								<div class="overlay-two">
 									<div class="overlay-two-inner">
 										<div class="overlay-two-content">
-											<h2>   
+											<h2>
                                                 <a href="{{ url("/projects/$project->id") }}">{{$project->title}}</a></h2>
                                                @if (strlen($project->desc) > 100)
                                                    @php
@@ -95,8 +95,8 @@
 											       <div class="text">{{$project->desc}}</div>
                                                 @else
                                                    <div class="text">{{$project->desc}}</div>
-                                                   
-                                                @endif      
+
+                                                @endif
 											<a href="{{ url("/projects/$project->id") }}" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
 										</div>
 									</div>

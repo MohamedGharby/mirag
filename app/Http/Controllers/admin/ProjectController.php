@@ -55,9 +55,13 @@ class ProjectController extends Controller
 
         $data['best'] = $best;
 
-        $path = Helper::uploadImage("public/projects" , $data["img"]);
-       // $path = Storage::putFile("public/projects" , $data['img']);
-        $data['img']= $path;
+         if ($request->hasFile("img")) {
+            $path = Helper::uploadImage($request , 'img' , "uploads/projects");
+            // $path = Storage::putFile("public/projects" , $data['img']);
+
+             $data['img']= $path;
+         }
+
 
         Project::create($data);
 
@@ -68,7 +72,7 @@ class ProjectController extends Controller
 
     public function edit(Project $project)
     {
-      
+
         $data['project'] = $project;
         return view('admin.projects.edit')->with($data);
     }
@@ -89,8 +93,10 @@ class ProjectController extends Controller
 
         if ($request->hasFile('img')) {
             Storage::delete($project->img);
-            $path =Helper::uploadImage("public/projects" , $data["img"]);
+            $path =Helper::uploadImage($request , 'img' , 'uploads/projects');
             //$path = Storage::putFile("public/projects" , $data['img']);
+
+
             $data['img']= $path;
         }
 

@@ -30,6 +30,7 @@ class AdminExpertController extends Controller
 
         if ($request->hasFile("img")) {
             $path = Helper::uploadImage( $request , "img" ,'uploads/experts' );
+
             $data["img"] = $path;
 
              Expert::create($data);
@@ -104,7 +105,8 @@ class AdminExpertController extends Controller
 
            if ($request->hasFile("img")) {
                Storage::delete($expert->img);
-               $path = Helper::uploadImage( $request , "img" ,'uploads/experts' );
+              $path = Helper::uploadImage( $request , "img" ,'uploads/experts' );
+
                $expert->update([
                 "id"=>$request->id,
                 "name"=>$request->name,

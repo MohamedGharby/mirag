@@ -456,9 +456,9 @@
                             	<div class="inner-box">
                                 	<div class="image">
                                         @php
-                                        $image = str_replace('public/', 'storage/', $bestProject->img);
+                                       // $image = str_replace('public/', 'storage/', $bestProject->img);
                                       @endphp
-                                        <img src="{{asset("$image")}}" alt="" />
+                                        <img src="{{asset("uploads/projects/$bestProject->img")}}" alt="" />
                                         <div class="overlay-box">
                                         	<div class="content">
                                             	<h3>{{$bestProject->title}}</h3>
@@ -514,10 +514,7 @@
                             <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
                         </ul>
                     	<div class="image">
-                            @php
-                                $image = str_replace('public/', 'storage/', $expert->img);
-                            @endphp
-                        	<img src="{{ asset("$image") }}" alt="" />
+                        	<img src="{{ asset("uploads/experts/$expert->img") }}" alt="" />
                         </div>
                         <div class="lower-box">
                         	<h3><a href="#">{{$expert->name}}</a></h3>
@@ -526,12 +523,6 @@
                     </div>
                 </div>
                 @endforeach
-
-
-
-
-
-
             </div>
 
         </div>
@@ -554,7 +545,7 @@
                 <div class="news-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="image">
-                            <a href="{{ url("latests/$latest->id") }}"><img src="{{ asset("uploads/$latest->main_img") }}" alt="" /></a>
+                            <a href="{{ url("latests/$latest->id") }}"><img src="{{ asset("uploads/latest/$latest->main_img") }}" alt="" /></a>
                             <div class="post-date"><span>{{ $latest->created_at->format('d') }}</span> {{ $latest->created_at->format('M') }}</div>
                         </div>
                         <div class="lower-content">
