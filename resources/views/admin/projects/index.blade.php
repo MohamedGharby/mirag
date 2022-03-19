@@ -45,9 +45,9 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $project->title }}</td>
                         @php
-                            $project->img = str_replace('public/', 'storage/', $project->img);
+                           // $project->img = str_replace('public/', 'storage/', $project->img);
                         @endphp
-                        <td><img src="{{ asset("$project->img") }}" style="height: 50px; width:50px"></td>
+                        <td><img src="{{ asset("uploads/projects/$project->img") }}" style="height: 50px; width:50px"></td>
                         <td>
                             @if ($project->best)
                                 <span class="badge bg-success">Best</span>

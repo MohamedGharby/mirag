@@ -33,11 +33,11 @@
                 @foreach ($imgs as $img)
 
                     @php
-                        $img->name = str_replace('public/', 'storage/', $img->name);
+                        //$img->name = str_replace('public/', 'storage/', $img->name);
                     @endphp
                     <div class="col-md-4">
                         <div class="card" style="width: 18rem;">
-                            <img style="height: 300px" src="{{ asset("$img->name") }}" class="card-img-top">
+                            <img style="height: 300px" src="{{ asset("uploads/projectImgs/$img->name") }}" class="card-img-top">
                             <div class="card-body d-flex align-items-center justify-content-center">
                                 <form  id="delete_form" action="{{url("dashboard/images/$img->id")}}" method="POST">
                                     @csrf
